@@ -1,8 +1,8 @@
 {
   "name": "polling_survey",
   "version": "0.1.0",
-  "homepage": "https://invvamsikrishna.github.io/polling_survey",
   "private": true,
+  "homepage": "/polling_survey",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",

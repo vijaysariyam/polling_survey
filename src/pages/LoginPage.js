@@ -37,7 +37,7 @@ export default function LoginPage() {
           <StyledContent>
             <Card sx={{ p: { xs: 2, sm: 3, md: 4, xl: 5 } }}>
               <Box sx={{ pb: 2, display: "flex", justifyContent: "center" }}>
-                <Box component="img" src="/static/assets/users.png" sx={{ width: 100, height: 100 }} />
+                <Box component="img" src="static/assets/users.png" sx={{ width: 100, height: 100 }} />
               </Box>
 
               <Typography variant="h4" gutterBottom>
