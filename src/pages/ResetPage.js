@@ -1,5 +1,5 @@
 import { styled } from "@mui/material/styles";
-import { Link, Container, Typography, Divider, Stack, Button, Card } from "@mui/material";
+import { Link, Container, Typography, Divider, Stack, Button, Card, Box } from "@mui/material";
 import Logo from "../components/logo";
 import { ResetForm } from "../sections/auth/forget";
 import Page from "../components/Page";
@@ -34,6 +34,14 @@ export default function ResetPage() {
             left: { xs: 16, sm: 24, md: 40 },
           }}
         />
+
+        <Stack direction="row" spacing={1} sx={{ pb: 2, justifyContent: "end", position: "fixed", top: { xs: 16, sm: 24, md: 40 }, right: { xs: 16, sm: 24, md: 40 } }}>
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-1.png"} sx={{ width: 60, height: 60 }} />
+
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-2.png"} sx={{ width: 60, height: 60 }} />
+
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-3.png"} sx={{ width: 60, height: 60 }} />
+        </Stack>
 
         <Container maxWidth="sm">
           <StyledContent>

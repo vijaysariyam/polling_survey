@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTheme } from "@mui/material/styles";
 import { Grid, Container, Typography, Box, TextField, Card } from "@mui/material";
 import Page from "../components/Page";
 import { connect } from "react-redux";
@@ -7,6 +8,8 @@ import { PieChartWidget } from "../sections/dashboard";
 import BarChartWidget from "../sections/dashboard/BarChartWidget";
 
 const DashboardApp = ({ dashboard }) => {
+  const theme = useTheme();
+
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
@@ -55,10 +58,11 @@ const DashboardApp = ({ dashboard }) => {
             <PieChartWidget
               title="Total Voters"
               chartData={[
-                { label: "Male", value: 4344 },
+                { label: "Male", value: 5428 },
                 { label: "Female", value: 5435 },
-                { label: "Transgender", value: 1443 },
+                { label: "Transgender", value: 895 },
               ]}
+              chartColors={[theme.palette.success.main, theme.palette.primary.main, theme.palette.error.main]}
             />
           </Grid>
 
@@ -73,6 +77,7 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "BJP", value: 1443 },
                 { label: "CONGRESS", value: 1443 },
               ]}
+              chartColors={[theme.palette.success.main, theme.palette.primary.main, theme.palette.warning.main, theme.palette.error.main, "#f78000", theme.palette.info.main]}
             />
           </Grid>
 
@@ -84,6 +89,7 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Not Started", value: 2542 },
                 { label: "Completed", value: 1443 },
               ]}
+              chartColors={[theme.palette.success.main, theme.palette.primary.main, theme.palette.info.main]}
             />
           </Grid>
 
@@ -98,6 +104,7 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Resolved", value: 456 },
                 { label: "Cancel", value: 876 },
               ]}
+              chartColors={[theme.palette.success.main, theme.palette.primary.main, theme.palette.info.main, "#f78000", theme.palette.error.main]}
             />
           </Grid>
 
@@ -116,20 +123,22 @@ const DashboardApp = ({ dashboard }) => {
                   data: [7, 7, 5, 13, 7, 3],
                 },
               ]}
-            />{" "}
+              chartColors={[theme.palette.primary.main, theme.palette.success.main]}
+            />
           </Grid>
 
           <Grid item xs={12} md={6} lg={4}>
             <PieChartWidget
               title="Age Wise Voters"
               chartData={[
-                { label: "18-25", value: 4344 },
+                { label: "18-25", value: 9052 },
                 { label: "25-35", value: 5435 },
                 { label: "35-45", value: 2452 },
                 { label: "45-55", value: 1443 },
                 { label: "55-65", value: 2415 },
                 { label: "65+", value: 1443 },
               ]}
+              chartColors={[theme.palette.primary.main, theme.palette.success.main, theme.palette.warning.main, theme.palette.error.main, "#f78000", theme.palette.info.main]}
             />
           </Grid>
 
@@ -141,6 +150,7 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Pending", value: 2542 },
                 { label: "Resolved", value: 3698 },
               ]}
+              chartColors={[theme.palette.primary.main, theme.palette.success.main, theme.palette.info.main]}
             />
           </Grid>
 
@@ -151,6 +161,7 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Residental", value: 9582 },
                 { label: "Non Residental", value: 2542 },
               ]}
+              chartColors={[theme.palette.success.main, theme.palette.primary.main]}
             />
           </Grid>
         </Grid>
