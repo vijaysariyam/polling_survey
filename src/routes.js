@@ -10,6 +10,7 @@ import ForgetPage from "./pages/ForgetPage";
 import ResetPage from "./pages/ResetPage";
 import DashboardPage from "./pages/DashboardPage";
 import SurveyReportsPage from "./pages/SurveyReportsPage";
+import TicketsPage from "./pages/TicketsPage";
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
           <Route path="dashboard" element={<DashboardPage />} />
 
           <Route path="reports/survey" element={<SurveyReportsPage />} />
+          <Route path="tickets" element={<TicketsPage />} />
         </Route>
       </Route>
 
