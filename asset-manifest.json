@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/polling_survey/static/css/main.d5681bb8.css",
-    "main.js": "/polling_survey/static/js/main.6287fa5a.js",
+    "main.js": "/polling_survey/static/js/main.97317eb8.js",
     "static/js/27.8f8a69dc.chunk.js": "/polling_survey/static/js/27.8f8a69dc.chunk.js",
     "static/media/crowd.jpg": "/polling_survey/static/media/crowd.33b2728fe8ec4ddf9d3f.jpg",
     "static/media/sub-background.jpg": "/polling_survey/static/media/sub-background.d880de50bd6b6be9d626.jpg",
@@ -9,6 +9,6 @@
   },
   "entrypoints": [
     "static/css/main.d5681bb8.css",
-    "static/js/main.6287fa5a.js"
+    "static/js/main.97317eb8.js"
   ]
 }
