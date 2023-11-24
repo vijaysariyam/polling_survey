@@ -3,23 +3,18 @@ import { Box, Card, CardHeader } from "@mui/material";
 import { fNumber } from "../../utils/formatNumber";
 import { useChart } from "../../components/chart";
 
-export default function BarChartWidget({ title, subheader, chartData, ...other }) {
-  const chartLabels = chartData.map((i) => i.label);
-
-  const chartSeries = chartData.map((i) => i.value);
-
+export default function BarChartWidget({ title, subheader, chartLabels, chartData, ...other }) {
   const chartOptions = useChart({
-    tooltip: {
-      marker: { show: false },
-      y: {
-        formatter: (seriesName) => fNumber(seriesName),
-        title: {
-          formatter: () => "",
+    chart: { stacked: true },
+    plotOptions: {
+      bar: {
+        borderRadius: 2,
+        dataLabels: {
+          total: {
+            enabled: true,
+          },
         },
       },
-    },
-    plotOptions: {
-      bar: { horizontal: true, barHeight: "28%", borderRadius: 2 },
     },
     xaxis: {
       categories: chartLabels,
@@ -31,7 +26,7 @@ export default function BarChartWidget({ title, subheader, chartData, ...other }
       <CardHeader title={title} subheader={subheader} />
 
       <Box sx={{ mx: 3 }} dir="ltr">
-        <ReactApexChart type="bar" series={[{ data: chartSeries }]} options={chartOptions} height={364} />
+        <ReactApexChart type="bar" series={chartData} options={chartOptions} height={364} />
       </Box>
     </Card>
   );

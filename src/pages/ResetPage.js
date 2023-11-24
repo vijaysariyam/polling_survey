@@ -3,8 +3,11 @@ import { Link, Container, Typography, Divider, Stack, Button, Card } from "@mui/
 import Logo from "../components/logo";
 import { ResetForm } from "../sections/auth/forget";
 import Page from "../components/Page";
+import { PUBLIC_URL } from "../constants";
 
 const StyledRoot = styled("div")(({ theme }) => ({
+  background: "linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.5)) center center / cover no-repeat, url('" + PUBLIC_URL + "/static/images/crowd.jpg') no-repeat center",
+  backgroundSize: "cover",
   [theme.breakpoints.up("md")]: {
     display: "flex",
   },
@@ -39,7 +42,7 @@ export default function ResetPage() {
                 Reset Password
               </Typography>
 
-              <Typography sx={{ color: "text.secondary", mb: 5 }}>Enter your details below to reset your password</Typography>
+              <Typography sx={{ color: "text.secondary", mb: 5 }}>Secure your account by resetting your password</Typography>
 
               <ResetForm />
             </Card>

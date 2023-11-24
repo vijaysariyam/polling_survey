@@ -15,12 +15,13 @@ const ResetForm = ({ showAlert }) => {
   const [isLoading, setLoading] = useState(false);
 
   const LoginSchema = Yup.object().shape({
-    username: Yup.string().required("Username is required"),
+    opassword: Yup.string().required("Old Password is required"),
     password: Yup.string().required("Password is required").min(8, "Password must be at least 8 characters"),
+    cpassword: Yup.string().required("Confirm Password is required"),
   });
 
   const defaultValues = {
-    username: "",
+    opassword: "",
     password: "",
     cpassword: "",
   };
@@ -34,14 +35,14 @@ const ResetForm = ({ showAlert }) => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    navigate("/login");
+    navigate("/dashboard", { replace: true });
     setLoading(false);
   };
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Stack my={3} spacing={3}>
-        <RHFTextField name="username" label="Username" />
+        <RHFTextField name="opassword" label="Old Password" />
 
         <RHFTextField name="password" label="Password" type="password" />
 

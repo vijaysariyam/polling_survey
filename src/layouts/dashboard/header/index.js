@@ -4,6 +4,7 @@ import { Box, Stack, AppBar, Toolbar, IconButton, Typography } from "@mui/materi
 import { bgBlur } from "../../../utils/cssStyles";
 import Iconify from "../../../components/Iconify";
 import AccountPopover from "./AccountPopover";
+import { PUBLIC_URL } from "../../../constants";
 
 const NAV_WIDTH = 280;
 
@@ -56,6 +57,14 @@ export default function Header({ onOpenNav }) {
             sm: 1,
           }}
         >
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-1.png"} sx={{ width: 60, height: 60 }} />
+
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-2.png"} sx={{ width: 60, height: 60 }} />
+
+          <Box component="img" src={PUBLIC_URL + "/static/images/imgs-3.png"} sx={{ width: 60, height: 60 }} />
+
+          <Box p={0.5} />
+
           <AccountPopover />
         </Stack>
       </StyledToolbar>

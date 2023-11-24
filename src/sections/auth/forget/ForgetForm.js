@@ -9,11 +9,18 @@ import Iconify from "../../../components/Iconify";
 import { FormProvider, RHFTextField } from "../../../components/hook-form";
 import { connect } from "react-redux";
 import { showAlert } from "../../../actions/alert";
+import { isOtpValid } from "../../../constants";
 
 const ForgetForm = ({ showAlert }) => {
   const navigate = useNavigate();
 
   const [isLoading, setLoading] = useState(false);
+
+  const [otpSent, setOtpSent] = useState(null);
+  const [otp, setOtp] = useState(null);
+  const [otpError, setOtpError] = useState();
+
+  const [formValues, setFormValues] = useState(null);
 
   const LoginSchema = Yup.object().shape({
     username: Yup.string().required("Username is required"),
@@ -32,10 +39,47 @@ const ForgetForm = ({ showAlert }) => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    showAlert({ text: "We will sent reset password link to your email.", color: "success" });
-    navigate("/reset-password");
+    // showAlert({ text: "We will sent reset password link to your email.", color: "success" });
+    // navigate("/reset-password");
+
+    setOtpSent("123456");
+    setFormValues(data);
     setLoading(false);
   };
+
+  const onOtpSubmit = async () => {
+    setOtpError(null);
+
+    if (!isOtpValid(otp)) {
+      setOtpError("OTP must be 6 characters");
+      return;
+    }
+
+    if (otp != otpSent) {
+      setOtpError("Invalid OTP");
+      return;
+    }
+
+    setLoading(true);
+    navigate("/reset-password", { replace: true });
+    setLoading(false);
+  };
+
+  if (!!otpSent) {
+    return (
+      <Stack spacing={3}>
+        <Typography gutterBottom variant="body2" sx={{ color: "text.secondary" }}>
+          Enter the OTP sent to +91 - 1234567890
+        </Typography>
+
+        <TextField name="otp" label="OTP" fullWidth error={!!otpError} helperText={otpError} onChange={(e) => setOtp(e.target.value)} />
+
+        <LoadingButton fullWidth size="large" type="submit" variant="contained" loading={isLoading} onClick={onOtpSubmit}>
+          Verify
+        </LoadingButton>
+      </Stack>
+    );
+  }
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>

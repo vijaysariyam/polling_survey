@@ -23,7 +23,7 @@ const StyledChartWrapper = styled("div")(({ theme }) => ({
   },
 }));
 
-export default function PieChartWidget({ title, subheader, chartColors, chartData, ...other }) {
+export default function PieChartWidget({ title, subheader, chartColors, chartData, type = "pie", ...other }) {
   const theme = useTheme();
 
   const chartLabels = chartData.map((i) => i.label);
@@ -55,7 +55,7 @@ export default function PieChartWidget({ title, subheader, chartColors, chartDat
       <CardHeader title={title} subheader={subheader} />
 
       <StyledChartWrapper dir="ltr">
-        <ReactApexChart type="pie" series={chartSeries} options={chartOptions} height={280} />
+        <ReactApexChart type={type} series={chartSeries} options={chartOptions} height={280} />
       </StyledChartWrapper>
     </Card>
   );

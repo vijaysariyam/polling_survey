@@ -4,6 +4,7 @@ import { Link as RouterLink } from "react-router-dom";
 import { Box, Divider, Typography, Stack, MenuItem, Avatar, IconButton, Popover } from "@mui/material";
 import { connect } from "react-redux";
 import { authLogout } from "../../../actions/auth";
+import MenuIcon from "@mui/icons-material/Menu";
 
 const AccountPopover = ({ account, authLogout }) => {
   const [open, setOpen] = useState(null);
@@ -22,24 +23,8 @@ const AccountPopover = ({ account, authLogout }) => {
 
   return (
     <>
-      <IconButton
-        onClick={handleOpen}
-        sx={{
-          p: 0,
-          ...(open && {
-            "&:before": {
-              zIndex: 1,
-              content: "''",
-              width: "100%",
-              height: "100%",
-              borderRadius: "50%",
-              position: "absolute",
-              bgcolor: (theme) => alpha(theme.palette.grey[900], 0.8),
-            },
-          }),
-        }}
-      >
-        <Avatar sx={{ bgcolor: "primary.main" }}>A</Avatar>
+      <IconButton onClick={handleOpen}>
+        <MenuIcon />
       </IconButton>
 
       <Popover

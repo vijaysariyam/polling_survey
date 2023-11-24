@@ -8,6 +8,7 @@ import Scrollbar from "../../../components/Scrollbar";
 import NavSection from "../../../components/NavSection";
 import navConfig from "./config";
 import { connect } from "react-redux";
+import { PUBLIC_URL } from "../../../constants";
 
 const NAV_WIDTH = 280;
 
@@ -32,8 +33,12 @@ const Nav = ({ account, openNav, onCloseNav }) => {
 
   const renderContent = (
     <Scrollbar>
-      <Box sx={{ px: 2.5, py: 3, display: "flex", justifyContent: "center" }}>
-        <Logo />
+      <Box sx={{ px: 2.5, py: 3, display: "flex", justifyContent: "center", alignItems: "center" }}>
+        <Box component="img" src={PUBLIC_URL + "/static/logo.png"} sx={{ width: "60px", height: "60px" }} />
+
+        <Typography variant="subtitle1" color="text.white" sx={{ pl: 2 }}>
+          CHANDRAGIRI CONSTITUENCY
+        </Typography>
       </Box>
 
       <Box sx={{ mb: 5, mx: 2.5 }}>
@@ -42,11 +47,11 @@ const Nav = ({ account, openNav, onCloseNav }) => {
             <Avatar>A</Avatar>
 
             <Box sx={{ ml: 2 }}>
-              <Typography variant="subtitle2" sx={{ color: "text.primary" }}>
+              <Typography variant="subtitle2" sx={{ color: "text.white" }}>
                 {"Admin"}
               </Typography>
 
-              <Typography variant="body2" sx={{ color: "text.secondary" }}>
+              <Typography variant="body2" sx={{ color: "text.white" }}>
                 {"Admin"}
               </Typography>
             </Box>
@@ -76,7 +81,7 @@ const Nav = ({ account, openNav, onCloseNav }) => {
           PaperProps={{
             sx: {
               width: NAV_WIDTH,
-              bgcolor: "background.default",
+              bgcolor: "primary.dark",
               borderRightStyle: "dashed",
             },
           }}
@@ -91,7 +96,7 @@ const Nav = ({ account, openNav, onCloseNav }) => {
             keepMounted: true,
           }}
           PaperProps={{
-            sx: { width: NAV_WIDTH },
+            sx: { width: NAV_WIDTH, bgcolor: "primary.dark" },
           }}
         >
           {renderContent}

@@ -1,8 +1,6 @@
 import { useEffect, useState } from "react";
-import { Grid, Container, Typography, CircularProgress, Box, TextField, Card, CardHeader, Button } from "@mui/material";
+import { Grid, Container, Typography, Box, TextField, Card } from "@mui/material";
 import Page from "../components/Page";
-import AppWidgetSummary from "../components/AppWidgetSummary";
-import CardTileWidget from "../components/CardTileWidget";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
 import { PieChartWidget } from "../sections/dashboard";
@@ -25,7 +23,7 @@ const DashboardApp = ({ dashboard }) => {
             </Grid>
 
             <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Select Dvision" fullWidth select />
+              <TextField label="Select Division" fullWidth select />
             </Grid>
 
             <Grid item xs={12} md={6} lg={3}>
@@ -80,6 +78,49 @@ const DashboardApp = ({ dashboard }) => {
 
           <Grid item xs={12} md={6} lg={4}>
             <PieChartWidget
+              title="Survey Status"
+              chartData={[
+                { label: "Started", value: 6966 },
+                { label: "Not Started", value: 2542 },
+                { label: "Completed", value: 1443 },
+              ]}
+            />
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={4}>
+            <PieChartWidget
+              title="Ticket Status"
+              type="donut"
+              chartData={[
+                { label: "Open", value: 6966 },
+                { label: "Inprogress", value: 2542 },
+                { label: "Pending", value: 1443 },
+                { label: "Resolved", value: 456 },
+                { label: "Cancel", value: 876 },
+              ]}
+            />
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={8}>
+            <BarChartWidget
+              title="Ticktes"
+              sx={{ height: "100%" }}
+              chartLabels={["Pakala", "Ramchandrapuram", "Chinnagottigallu", "Chandragiri", "Yerravanipalem", "Tirupathi (Rural)"]}
+              chartData={[
+                {
+                  name: "Completed",
+                  data: [21, 7, 25, 13, 22, 8],
+                },
+                {
+                  name: "Pending",
+                  data: [7, 7, 5, 13, 7, 3],
+                },
+              ]}
+            />{" "}
+          </Grid>
+
+          <Grid item xs={12} md={6} lg={4}>
+            <PieChartWidget
               title="Age Wise Voters"
               chartData={[
                 { label: "18-25", value: 4344 },
@@ -94,11 +135,11 @@ const DashboardApp = ({ dashboard }) => {
 
           <Grid item xs={12} md={6} lg={4}>
             <PieChartWidget
-              title="Survey Status"
+              title="Voter Requests"
               chartData={[
-                { label: "Started", value: 6966 },
-                { label: "Not Started", value: 2542 },
-                { label: "Completed", value: 1443 },
+                { label: "New Requests", value: 9582 },
+                { label: "Pending", value: 2542 },
+                { label: "Resolved", value: 3698 },
               ]}
             />
           </Grid>
@@ -111,21 +152,6 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Non Residental", value: 2542 },
               ]}
             />
-          </Grid>
-
-          <Grid item xs={12} md={6} lg={4}>
-            <BarChartWidget
-              title="Ticktes"
-              sx={{ height: "100%" }}
-              chartData={[
-                { label: "Pakala", value: 400 },
-                { label: "Ramchandrapuram", value: 430 },
-                { label: "Chinnagottigallu", value: 448 },
-                { label: "Chandragiri", value: 470 },
-                { label: "Yerravanipalem", value: 540 },
-                { label: "Tirupathi (Rural)", value: 580 },
-              ]}
-            />{" "}
           </Grid>
         </Grid>
       </Container>

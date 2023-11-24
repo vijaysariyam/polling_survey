@@ -10,19 +10,12 @@ import { FormProvider, RHFTextField } from "../../../components/hook-form";
 import { connect } from "react-redux";
 import { authSuccess } from "../../../actions/auth";
 import { showAlert } from "../../../actions/alert";
-import { isOtpValid } from "../../../constants";
 
 const LoginForm = ({ showAlert, authSuccess }) => {
   const navigate = useNavigate();
 
   const [isLoading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
-
-  const [otpSent, setOtpSent] = useState(null);
-  const [otp, setOtp] = useState(null);
-  const [otpError, setOtpError] = useState();
-
-  const [formValues, setFormValues] = useState(null);
 
   const LoginSchema = Yup.object().shape({
     username: Yup.string().required("Username is required"),
@@ -43,49 +36,16 @@ const LoginForm = ({ showAlert, authSuccess }) => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    setOtpSent("123456");
-    setFormValues(data);
+    alert("New user? Secure your account by resetting your password.");
+    showAlert({ text: "New user? Secure your account by resetting your password.", color: "success" });
+    navigate("/reset-password");
     setLoading(false);
   };
-
-  const onOtpSubmit = async () => {
-    setOtpError(null);
-
-    if (!isOtpValid(otp)) {
-      setOtpError("OTP must be 6 characters");
-      return;
-    }
-
-    if (otp != otpSent) {
-      setOtpError("Invalid OTP");
-      return;
-    }
-
-    setLoading(true);
-    navigate("/dashboard", { replace: true });
-    setLoading(false);
-  };
-
-  if (!!otpSent) {
-    return (
-      <Stack spacing={3}>
-        <Typography gutterBottom variant="body2" sx={{ color: "text.secondary" }}>
-          Enter the OTP sent to +91 - 1234567890
-        </Typography>
-
-        <TextField name="otp" label="OTP" fullWidth error={!!otpError} helperText={otpError} onChange={(e) => setOtp(e.target.value)} />
-
-        <LoadingButton fullWidth size="large" type="submit" variant="contained" loading={isLoading} onClick={onOtpSubmit}>
-          Verify
-        </LoadingButton>
-      </Stack>
-    );
-  }
 
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
-      <Stack my={3} spacing={3}>
-        <RHFTextField name="username" label="Username" />
+      <Stack spacing={2}>
+        <RHFTextField name="username" label="Mobile number" />
 
         <RHFTextField
           name="password"
@@ -101,6 +61,10 @@ const LoginForm = ({ showAlert, authSuccess }) => {
             ),
           }}
         />
+
+        <img className="captcha-image" src="https://miro.medium.com/v2/resize:fit:1024/0*obnHri9w__4Cmhbj.jpg" alt="captcha" />
+
+        <RHFTextField name="captcha" label="Enter Captcha" />
       </Stack>
 
       <Stack direction="row" alignItems="center" justifyContent="end" sx={{ my: 2 }}>
