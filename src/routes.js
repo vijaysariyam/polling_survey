@@ -11,6 +11,11 @@ import ResetPage from "./pages/ResetPage";
 import DashboardPage from "./pages/DashboardPage";
 import SurveyReportsPage from "./pages/SurveyReportsPage";
 import TicketsPage from "./pages/TicketsPage";
+import UserRegistrationPage from "./pages/UserRegistrationPage";
+import VoterRegistrationPage from "./pages/VoterRegistrationPage";
+import AddPollSurveyPage from "./pages/AddPollSurveyPage";
+import AddTicketPage from "./pages/AddTicketPage";
+import ViewUserPage from "./pages/ViewUserPage";
 
 const Router = () => {
   return (
@@ -28,6 +33,15 @@ const Router = () => {
 
           <Route path="reports/survey" element={<SurveyReportsPage />} />
           <Route path="tickets" element={<TicketsPage />} />
+          <Route path="user-registration" element={<UserRegistrationPage />} />
+          <Route path="view-user" element={<ViewUserPage />} />
+          <Route
+            path="voter-registration"
+            element={<VoterRegistrationPage />}
+          />
+          <Route path="add-poll-survey" element={<AddPollSurveyPage />} />
+          <Route path="add-ticket" element={<AddTicketPage />} />
+
         </Route>
       </Route>
 

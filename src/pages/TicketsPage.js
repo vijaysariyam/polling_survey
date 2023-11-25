@@ -20,7 +20,7 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 
 import TablePagination from "@mui/material/TablePagination";
-import Autocomplete from "@mui/material/Autocomplete";
+
 import Button from "@mui/material/Button";
 
 function totalStats(name, ofOpen, OfResolved, ofCancelled, ofEscalated) {
@@ -107,17 +107,17 @@ const rows = [
     "+94123456789",
     "",
     "",
-    <Autocomplete
-      sx={{
-        border: "none",
-      }}
-      {...defaultProps}
-      id="Open"
-      Open
-      renderInput={(params) => (
-        <TextField {...params} label="Open" variant="standard" />
-      )}
-    />,
+    <TextField
+    sx={{
+      border: "none",
+    }}
+    id="Open"
+    label="Open"
+    variant="standard"
+    InputProps={{
+      disableUnderline: true,
+    }}
+  />,
     <Button variant="outlined">Submit</Button>
   ),
   createData(
@@ -126,16 +126,16 @@ const rows = [
     "+94123456589",
     "",
     "",
-    <Autocomplete
+    <TextField
       sx={{
         border: "none",
       }}
-      {...defaultProps}
       id="Open"
-      Open
-      renderInput={(params) => (
-        <TextField {...params} label="Open" variant="standard" />
-      )}
+      label="Open"
+      variant="standard"
+      InputProps={{
+        disableUnderline: true,
+      }}
     />,
     <Button variant="outlined">Submit</Button>
   ),
@@ -145,16 +145,16 @@ const rows = [
     "+94123476789",
     "",
     "",
-    <Autocomplete
+    <TextField
       sx={{
         border: "none",
       }}
-      {...defaultProps}
       id="Open"
-      Open
-      renderInput={(params) => (
-        <TextField {...params} label="Open" variant="standard" />
-      )}
+      label="Open"
+      variant="standard"
+      InputProps={{
+        disableUnderline: true,
+      }}
     />,
     <Button variant="outlined">Submit</Button>
   ),
@@ -164,20 +164,17 @@ const rows = [
     "+94123459789",
     "",
     "",
-    <Autocomplete
-     
-      {...defaultProps}
-      id="Open"
-      Open
-      renderInput={(params) => (
-        <TextField
-          {...params}
-          label="Open"
-          variant="standard"
-          InputProps={{ ...params.InputProps, disableUnderline: true }}
-        />
-      )}
-    />,
+    <TextField
+    sx={{
+      border: "none",
+    }}
+    id="Open"
+    label="Open"
+    variant="standard"
+    InputProps={{
+      disableUnderline: true,
+    }}
+  />,
     <Button variant="outlined">Submit</Button>
   ),
 ];
@@ -196,10 +193,10 @@ const TicketsPage = ({ dashboard }) => {
   };
 
   return (
-    <Page title="Dashboard">
+    <Page title="View Tickets">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Tickets
+          View Tickets
         </Typography>
 
         <Card sx={{ p: 3 }}>
