@@ -1,5 +1,15 @@
 import { useEffect, useState } from "react";
-import { Typography, Card, Stack, Grid, Switch, Divider, Box, Chip, TextField } from "@mui/material";
+import {
+  Typography,
+  Card,
+  Stack,
+  Grid,
+  Switch,
+  Divider,
+  Box,
+  Chip,
+  TextField,
+} from "@mui/material";
 import MUIDataTable from "mui-datatables";
 import { connect } from "react-redux";
 import { showAlert } from "../../actions/alert";
@@ -97,10 +107,62 @@ const SurveyReportsList = ({ showAlert }) => {
           title="Survey Analysis"
           columns={columns}
           data={[
-            ["District 1", "Constituency 1", "2522", "69%", "888", "24%", "699", "5%", "455", "4%", "230", "2%"],
-            ["District 1", "Constituency 1", "1234", "64%", "888", "24%", "-", "-", "-", "-", "-", "-"],
-            ["District 2", "Constituency 2", "1422", "49%", "888", "24%", "-", "-", "455", "4%", "230", "2%"],
-            ["District 2", "Constituency 2", "2522", "59%", "888", "24%", "-", "-", "455", "4%", "230", "2%"],
+            [
+              "District 1",
+              "Constituency 1",
+              "2522",
+              "69%",
+              "888",
+              "24%",
+              "699",
+              "5%",
+              "455",
+              "4%",
+              "230",
+              "2%",
+            ],
+            [
+              "District 1",
+              "Constituency 1",
+              "1234",
+              "64%",
+              "888",
+              "24%",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+              "-",
+            ],
+            [
+              "District 2",
+              "Constituency 2",
+              "1422",
+              "49%",
+              "888",
+              "24%",
+              "-",
+              "-",
+              "455",
+              "4%",
+              "230",
+              "2%",
+            ],
+            [
+              "District 2",
+              "Constituency 2",
+              "2522",
+              "59%",
+              "888",
+              "24%",
+              "-",
+              "-",
+              "455",
+              "4%",
+              "230",
+              "2%",
+            ],
           ]}
           options={options}
         />
