@@ -21,17 +21,19 @@ const navConfig = [
   {
     title: "View User",
     path: "/view-user",
-    icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
+    icon: <Iconify icon="ic:baseline-people" width="24px" height="24px" />,
   },
   {
     title: "Add Voter",
     path: "/voter-registration",
-    icon: <Iconify icon="ic:round-people" width="24px" height="24px" />,
+    icon: (
+      <Iconify icon="icon-park-outline:people" width="24px" height="24px" />
+    ),
   },
   {
     title: "View Voter",
     path: "/vew-voter",
-    icon: <Iconify icon="ic:round-people" width="24px" height="24px" />,
+    icon: <Iconify icon="formkit:people" width="24px" height="24px" />,
   },
 
   {
@@ -67,6 +69,16 @@ const navConfig = [
     title: "Add Poll Survey",
     path: "/add-poll-survey",
     icon: <Iconify icon="ph:note-duotone" width="24px" height="24px" />,
+  },
+  {
+    title: "Voter and Volunteer Mapping",
+    path: "/voter-and-volunteer-mapping",
+    icon: <Iconify icon="ri:mind-map" width="24px" height="24px" />,
+  },
+  {
+    title: "Sachivalayam",
+    path: "/sachivalayam",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
   },
 
   {

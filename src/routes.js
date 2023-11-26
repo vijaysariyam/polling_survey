@@ -16,6 +16,8 @@ import VoterRegistrationPage from "./pages/VoterRegistrationPage";
 import AddPollSurveyPage from "./pages/AddPollSurveyPage";
 import AddTicketPage from "./pages/AddTicketPage";
 import ViewUserPage from "./pages/ViewUserPage";
+import VoterAndVolunteerMappingPage from "./pages/VoterAndVolunteerMappingPage";
+import Sachivalayam from "./pages/Sachivalayam";
 
 const Router = () => {
   return (
@@ -41,7 +43,11 @@ const Router = () => {
           />
           <Route path="add-poll-survey" element={<AddPollSurveyPage />} />
           <Route path="add-ticket" element={<AddTicketPage />} />
-
+          <Route
+            path="voter-and-volunteer-mapping"
+            element={<VoterAndVolunteerMappingPage />}
+          />
+          <Route path="sachivalayam" element={<Sachivalayam />} />
         </Route>
       </Route>
 
