@@ -13,20 +13,20 @@ import { LoadingButton } from "@mui/lab";
 import ViewUsersList from "../sections/reports/ViewUsersList";
 import Button from "@mui/material/Button";
 import VoterAndVolunteerMappingList from "../sections/reports/VoterAndVolunteerMappingList";
-import SachivalayamList from "../sections/reports/SachivalayamList";
+import PartsList from "../sections/reports/PartsList";
 
-const Sachivalayam = ({ dashboard }) => {
+const PartsPage = ({ dashboard }) => {
   return (
     <Page title="View User">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Sachivalayam
+          Parts
         </Typography>
 
         <Card sx={{ p: 3 }}>
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6} lg={9}>
-              <SachivalayamList />
+              <PartsList />
             </Grid>
             <Grid
               item
@@ -40,12 +40,18 @@ const Sachivalayam = ({ dashboard }) => {
               }}
             >
               {" "}
-              <TextField label="Select State" fullWidth select /> 
+              <TextField label="Select State" fullWidth select />
               <TextField label="Select District" fullWidth select />{" "}
               <TextField label="Select Constituency" fullWidth select />
               <TextField label="Select Mandal" fullWidth select />
               <TextField label="Select Division" fullWidth select />
-              <TextField label="Sachivalayam Name" fullWidth />
+              <TextField label="Select Sachivalayam " fullWidth select />
+              <TextField label="Part Number " fullWidth />
+              <TextField label="Part SL Number " fullWidth />
+              <TextField label="Male Votes " fullWidth />
+              <TextField label="Female Votes" fullWidth />
+              <TextField label="Tg Votes" fullWidth />
+              <TextField label="Totals Votes" fullWidth />
               <LoadingButton
                 variant="contained"
                 sx={{
@@ -70,4 +76,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Sachivalayam);
+export default connect(mapStateToProps, null)(PartsPage);

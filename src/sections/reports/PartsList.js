@@ -21,25 +21,25 @@ import Sachivalayam from "../../pages/Sachivalayam";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const SachivalayamList = ({ showAlert }) => {
+const PartsList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "District Name",
+      label: "Part Number",
     },
     {
-      label: "Constituency Name",
+      label: "Male Votes",
     },
     {
-      label: "Mandal Name",
+      label: "Female Votes",
     },
     {
-      label: "Division Name",
+      label: "Tg Votes",
     },
 
     {
-      label: "Sachivalayam",
+      label: "Totals Votes",
     },
 
     {
@@ -80,27 +80,27 @@ const SachivalayamList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "District - 1",
-              "constituency - 1",
-              "Mandal - 1",
-              "DAMALACHERUVU",
-              "Uppara Palli",
+              "123145",
+              "54545",
+              "87878",
+              "454548978",
+              "989878787897",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
-              "constituency - 2",
-              "Mandal - 1",
-              "MOGARALA",
-              "Padiputlabailu",
+              "123145",
+              "54545",
+              "87878",
+              "454548978",
+              "989878787897",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
-              "constituency - 3",
-              "Mandal - 1",
-              "NENDRAGUNTA",
-              "Gadanki",
+              "123145",
+              "54545",
+              "87878",
+              "454548978",
+              "989878787897",
               renderEditAndDelete(),
             ],
           ]}
@@ -120,4 +120,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(SachivalayamList);
+})(PartsList);

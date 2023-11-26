@@ -21,13 +21,10 @@ import Sachivalayam from "../../pages/Sachivalayam";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const SachivalayamList = ({ showAlert }) => {
+const VillagesList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
-    {
-      label: "District Name",
-    },
     {
       label: "Constituency Name",
     },
@@ -40,6 +37,9 @@ const SachivalayamList = ({ showAlert }) => {
 
     {
       label: "Sachivalayam",
+    },
+    {
+      label: "Part Number",
     },
 
     {
@@ -80,27 +80,29 @@ const SachivalayamList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "District - 1",
+             
               "constituency - 1",
               "Mandal - 1",
               "DAMALACHERUVU",
               "Uppara Palli",
+              "45487",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
+              
               "constituency - 2",
               "Mandal - 1",
               "MOGARALA",
               "Padiputlabailu",
+              "545454",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
+             
               "constituency - 3",
               "Mandal - 1",
               "NENDRAGUNTA",
-              "Gadanki",
+              "Gadanki","54445",
               renderEditAndDelete(),
             ],
           ]}
@@ -120,4 +122,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(SachivalayamList);
+})(VillagesList);

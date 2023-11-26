@@ -5,21 +5,18 @@ import {
   Box,
   TextField,
   Card,
-  FormControlLabel,
+
   InputAdornment,
 } from "@mui/material";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
-import Radio from "@mui/material/Radio";
-import RadioGroup from "@mui/material/RadioGroup";
-import FormControl from "@mui/material/FormControl";
-import FormLabel from "@mui/material/FormLabel";
+
 
 import Page from "../components/Page";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
 
-import { CheckBox } from "@mui/icons-material";
+
 
 const AddTicketPage = ({ dashboard }) => {
   return (
@@ -32,14 +29,6 @@ const AddTicketPage = ({ dashboard }) => {
           <Typography sx={{ pb: 2 }}>Basic Info</Typography>
 
           <Grid container spacing={2} alignItems="center">
-            <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Voter List *" fullWidth select />
-            </Grid>
-
-            <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Volunteer Name *" fullWidth />
-            </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Navaratnalu ID" fullWidth select />
             </Grid>
@@ -95,7 +84,7 @@ const AddTicketPage = ({ dashboard }) => {
             </Grid>
             <Grid item xs={12} md={6} lg={9}>
               <TextField
-                label="Write Reason..."
+                label="Attachements Description..."
                 fullWidth
                 multiline
                 rows={4}

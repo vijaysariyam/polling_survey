@@ -18,6 +18,18 @@ import AddTicketPage from "./pages/AddTicketPage";
 import ViewUserPage from "./pages/ViewUserPage";
 import VoterAndVolunteerMappingPage from "./pages/VoterAndVolunteerMappingPage";
 import Sachivalayam from "./pages/Sachivalayam";
+import DivisionPage from "./pages/DivisionPage";
+import MandalPage from "./pages/MandalPage";
+import ConstituenciesPage from "./pages/ConstituenciesPage";
+import DistrictsPage from "./pages/DistrictsPage";
+import StatesPage from "./pages/StatesPage";
+import PartsPage from "./pages/PartsPage";
+import VillagesPage from "./pages/VillagesPage";
+import PartiesPage from "./pages/PartiesPage";
+import DesignationPage from "./pages/DesignationPage";
+import ViewVoterPage from "./pages/ViewVoterPage";
+import UserMappingPage from "./pages/UserMappingPage";
+import AbsentTicketPage from "./pages/AbsentTicketPage";
 
 const Router = () => {
   return (
@@ -32,22 +44,33 @@ const Router = () => {
       <Route path="/" element={<ProtectedRoute />}>
         <Route path="" element={<DashboardLayout />}>
           <Route path="dashboard" element={<DashboardPage />} />
-
           <Route path="reports/survey" element={<SurveyReportsPage />} />
           <Route path="tickets" element={<TicketsPage />} />
           <Route path="user-registration" element={<UserRegistrationPage />} />
           <Route path="view-user" element={<ViewUserPage />} />
+          <Route path="view-voter" element={<ViewVoterPage />} />
           <Route
             path="voter-registration"
             element={<VoterRegistrationPage />}
           />
           <Route path="add-poll-survey" element={<AddPollSurveyPage />} />
-          <Route path="add-ticket" element={<AddTicketPage />} />
+          <Route path="add-ticket1" element={<AddTicketPage />} />
+          <Route path="absent-ticket" element={<AbsentTicketPage />} />
           <Route
             path="voter-and-volunteer-mapping"
             element={<VoterAndVolunteerMappingPage />}
           />
+          <Route path="user-mapping" element={<UserMappingPage />} />
+          <Route path="divisions" element={<DivisionPage />} />{" "}
+          <Route path="mandals" element={<MandalPage />} />
+          <Route path="constituencies" element={<ConstituenciesPage />} />
+          <Route path="districts" element={<DistrictsPage />} />
+          <Route path="states" element={<StatesPage />} />
           <Route path="sachivalayam" element={<Sachivalayam />} />
+          <Route path="parts" element={<PartsPage />} />
+          <Route path="villages" element={<VillagesPage />} />
+          <Route path="parties" element={<PartiesPage />} />
+          <Route path="designations" element={<DesignationPage />} />
         </Route>
       </Route>
 

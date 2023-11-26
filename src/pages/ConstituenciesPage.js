@@ -12,21 +12,20 @@ import { LoadingButton } from "@mui/lab";
 
 import ViewUsersList from "../sections/reports/ViewUsersList";
 import Button from "@mui/material/Button";
-import VoterAndVolunteerMappingList from "../sections/reports/VoterAndVolunteerMappingList";
-import SachivalayamList from "../sections/reports/SachivalayamList";
+import ConstituenciesList from "../sections/reports/ConstituenciesList";
 
-const Sachivalayam = ({ dashboard }) => {
+const ConstituenciesPage = ({ dashboard }) => {
   return (
     <Page title="View User">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Sachivalayam
+          Constituencies
         </Typography>
 
         <Card sx={{ p: 3 }}>
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6} lg={9}>
-              <SachivalayamList />
+              <ConstituenciesList />
             </Grid>
             <Grid
               item
@@ -40,12 +39,9 @@ const Sachivalayam = ({ dashboard }) => {
               }}
             >
               {" "}
-              <TextField label="Select State" fullWidth select /> 
+              <TextField label="Select State" fullWidth select />
               <TextField label="Select District" fullWidth select />{" "}
-              <TextField label="Select Constituency" fullWidth select />
-              <TextField label="Select Mandal" fullWidth select />
-              <TextField label="Select Division" fullWidth select />
-              <TextField label="Sachivalayam Name" fullWidth />
+              <TextField label="Constituency Name" fullWidth />
               <LoadingButton
                 variant="contained"
                 sx={{
@@ -70,4 +66,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(Sachivalayam);
+export default connect(mapStateToProps, null)(ConstituenciesPage);

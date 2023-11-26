@@ -17,26 +17,26 @@ import { connect } from "react-redux";
 import { showAlert } from "../../actions/alert";
 import { LoadingButton } from "@mui/lab";
 import ViewUserPage from "../../pages/ViewUserPage";
+import Sachivalayam from "../../pages/Sachivalayam";
+import EditNoteIcon from "@mui/icons-material/EditNote";
+import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const VoterAndVolunteerMappingList = ({ showAlert }) => {
+const MandalsList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "Select",
+      label: "District Name",
     },
     {
-      label: "Voter ID",
+      label: "Constituency Name",
     },
     {
-      label: "Voter Name",
-    },
-    {
-      label: "Father Name",
+      label: "Mandal Name",
     },
 
     {
-      label: "Cell",
+      label: "Edit/Delete",
     },
   ];
 
@@ -45,8 +45,22 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
     selectableRows: "none",
     responsive: "standard",
   };
-  const renderCheckBox = () => {
-    return <CheckBox />;
+  const renderEditAndDelete = () => {
+    return (
+      <Box>
+        <EditNoteIcon
+          sx={{
+            color: "#1976d2",
+          }}
+        />
+        <DeleteForeverIcon
+          sx={{
+            color: "#f44336",
+            marginLeft: "10px",
+          }}
+        />
+      </Box>
+    );
   };
 
   return (
@@ -59,25 +73,25 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              renderCheckBox(),
-              "IAX1916410",
-              "SAMEEULLA SYED",
-              "SILAR SAHEB SYED",
-              "912345678",
+              "District - 1",
+              "constituency - 1",
+              "Mandal - 1",
+
+              renderEditAndDelete(),
             ],
             [
-              renderCheckBox(),
-              "IAX1916378",
-              "ZEENAT SYED ",
-              "AMEEULLA SYED",
-              "912345678",
+              "District - 1",
+              "constituency - 2",
+              "Mandal - 1",
+
+              renderEditAndDelete(),
             ],
             [
-              renderCheckBox(),
-              "IAX1897867",
-              "SEEMA S",
-              "CHAN BASHA S",
-              "912345678",
+              "District - 1",
+              "constituency - 3",
+              "Mandal - 1",
+
+              renderEditAndDelete(),
             ],
           ]}
           options={options}
@@ -96,4 +110,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(VoterAndVolunteerMappingList);
+})(MandalsList);

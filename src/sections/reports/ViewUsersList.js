@@ -10,6 +10,7 @@ import {
   Chip,
   TextField,
 } from "@mui/material";
+import { CheckBox } from "@mui/icons-material";
 import MUIDataTable from "mui-datatables";
 import { connect } from "react-redux";
 import { showAlert } from "../../actions/alert";
@@ -20,6 +21,9 @@ const ViewUsersList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
+    {
+      label: "Select",
+    },
     {
       label: "Constituency Name",
     },
@@ -50,6 +54,10 @@ const ViewUsersList = ({ showAlert }) => {
     responsive: "standard",
   };
 
+  const renderCheckBox = () => {
+    return <CheckBox />;
+  };
+
   return (
     <Card elevation={1}>
       <Stack>
@@ -60,6 +68,7 @@ const ViewUsersList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
+              renderCheckBox(),
               "Constituency 1",
               "User 1",
               "user1",
@@ -69,6 +78,7 @@ const ViewUsersList = ({ showAlert }) => {
               "Edit",
             ],
             [
+              renderCheckBox(),
               "Constituency 1",
               "User 1",
               "user1",
@@ -78,6 +88,7 @@ const ViewUsersList = ({ showAlert }) => {
               "Edit",
             ],
             [
+              renderCheckBox(),
               "Constituency 1",
               "User 1",
               "user1",
@@ -87,6 +98,7 @@ const ViewUsersList = ({ showAlert }) => {
               "Edit",
             ],
             [
+              renderCheckBox(),
               "Constituency 1",
               "User 1",
               "user1",

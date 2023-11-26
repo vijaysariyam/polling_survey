@@ -32,13 +32,20 @@ const navConfig = [
   },
   {
     title: "View Voter",
-    path: "/vew-voter",
+    path: "/view-voter",
     icon: <Iconify icon="formkit:people" width="24px" height="24px" />,
   },
 
   {
-    title: "Add Ticket",
-    path: "/add-ticket",
+    title: "No Vote Reason Ticket",
+    path: "/add-ticket1",
+    icon: (
+      <Iconify icon="majesticons:tickets-line" width="24px" height="24px" />
+    ),
+  },
+  {
+    title: "Absent Ticket",
+    path: "/absent-ticket",
     icon: (
       <Iconify icon="majesticons:tickets-line" width="24px" height="24px" />
     ),
@@ -76,8 +83,58 @@ const navConfig = [
     icon: <Iconify icon="ri:mind-map" width="24px" height="24px" />,
   },
   {
+    title: "User Mapping",
+    path: "/user-mapping",
+    icon: <Iconify icon="ri:mind-map" width="24px" height="24px" />,
+  },
+  {
+    title: "Divisions",
+    path: "/divisions",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Mandals",
+    path: "/mandals",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Constituencies",
+    path: "/constituencies",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Districts",
+    path: "/districts",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "States",
+    path: "/states",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
     title: "Sachivalayam",
     path: "/sachivalayam",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Parts",
+    path: "/parts",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Villages",
+    path: "/villages",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Parties",
+    path: "/parties",
+    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+  },
+  {
+    title: "Designations",
+    path: "/designations",
     icon: <Iconify icon="bi:building" width="24px" height="24px" />,
   },
 

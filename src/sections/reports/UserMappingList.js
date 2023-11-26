@@ -18,7 +18,7 @@ import { showAlert } from "../../actions/alert";
 import { LoadingButton } from "@mui/lab";
 import ViewUserPage from "../../pages/ViewUserPage";
 
-const VoterAndVolunteerMappingList = ({ showAlert }) => {
+const UserMappingList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
@@ -26,17 +26,17 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
       label: "Select",
     },
     {
-      label: "Voter ID",
+      label: "User ID",
     },
     {
-      label: "Voter Name",
+      label: "User Name",
     },
     {
-      label: "Father Name",
+      label: "Email",
     },
 
     {
-      label: "Cell",
+      label: "Phone",
     },
   ];
 
@@ -62,21 +62,21 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
               renderCheckBox(),
               "IAX1916410",
               "SAMEEULLA SYED",
-              "SILAR SAHEB SYED",
+              "user123@gmail.com",
               "912345678",
             ],
             [
               renderCheckBox(),
               "IAX1916378",
               "ZEENAT SYED ",
-              "AMEEULLA SYED",
+              "user123@gmail.com",
               "912345678",
             ],
             [
               renderCheckBox(),
               "IAX1897867",
               "SEEMA S",
-              "CHAN BASHA S",
+              "user123@gmail.com",
               "912345678",
             ],
           ]}
@@ -96,4 +96,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(VoterAndVolunteerMappingList);
+})(UserMappingList);

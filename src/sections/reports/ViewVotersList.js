@@ -9,39 +9,38 @@ import {
   Box,
   Chip,
   TextField,
-  FormControlLabel,
 } from "@mui/material";
 import { CheckBox } from "@mui/icons-material";
 import MUIDataTable from "mui-datatables";
 import { connect } from "react-redux";
 import { showAlert } from "../../actions/alert";
 import { LoadingButton } from "@mui/lab";
-import ViewUserPage from "../../pages/ViewUserPage";
-import Sachivalayam from "../../pages/Sachivalayam";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const SachivalayamList = ({ showAlert }) => {
+const ViewVotersList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "District Name",
+      label: "Voter ID",
     },
     {
-      label: "Constituency Name",
+      label: "Voter Name",
     },
     {
-      label: "Mandal Name",
+      label: "Father/Mother/Husband",
     },
     {
-      label: "Division Name",
+      label: "Is Resident",
+    },
+    {
+      label: "Phone",
     },
 
     {
-      label: "Sachivalayam",
+      label: "Email",
     },
-
     {
       label: "Edit/Delete",
     },
@@ -52,6 +51,7 @@ const SachivalayamList = ({ showAlert }) => {
     selectableRows: "none",
     responsive: "standard",
   };
+
   const renderEditAndDelete = () => {
     return (
       <Box>
@@ -76,31 +76,43 @@ const SachivalayamList = ({ showAlert }) => {
         <Divider />
 
         <MUIDataTable
-          title=""
+          title="Voter List"
           columns={columns}
           data={[
             [
-              "District - 1",
-              "constituency - 1",
-              "Mandal - 1",
-              "DAMALACHERUVU",
-              "Uppara Palli",
+              "5454",
+              "Voter 1",
+              "Rama",
+              "Yes",
+              "Cell 1",
+              "user1@example.com",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
-              "constituency - 2",
-              "Mandal - 1",
-              "MOGARALA",
-              "Padiputlabailu",
+              "656456",
+              "Voter 1",
+              "Sita",
+              "Yes",
+              "Cell 1",
+              "user1@example.com",
               renderEditAndDelete(),
             ],
             [
-              "District - 1",
-              "constituency - 3",
-              "Mandal - 1",
-              "NENDRAGUNTA",
-              "Gadanki",
+              "654646",
+              "Voter 1",
+              "laxman",
+              "No",
+              "Cell 1",
+              "user1@example.com",
+              renderEditAndDelete(),
+            ],
+            [
+              "656456456",
+              "Voter 1",
+              "Bharath",
+              "No",
+              "Cell 1",
+              "user1@example.com",
               renderEditAndDelete(),
             ],
           ]}
@@ -120,4 +132,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(SachivalayamList);
+})(ViewVotersList);
