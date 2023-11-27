@@ -1,5 +1,12 @@
 import { useEffect, useState } from "react";
-import { Grid, Container, Typography, Box, TextField, Card } from "@mui/material";
+import {
+  Grid,
+  Container,
+  Typography,
+  Box,
+  TextField,
+  Card,
+} from "@mui/material";
 import Page from "../components/Page";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
@@ -82,7 +89,6 @@ const DashboardApp = ({ dashboard }) => {
               chartData={[
                 { label: "Started", value: 6966 },
                 { label: "Not Started", value: 2542 },
-                { label: "Completed", value: 1443 },
               ]}
             />
           </Grid>
@@ -105,7 +111,14 @@ const DashboardApp = ({ dashboard }) => {
             <BarChartWidget
               title="Ticktes"
               sx={{ height: "100%" }}
-              chartLabels={["Pakala", "Ramchandrapuram", "Chinnagottigallu", "Chandragiri", "Yerravanipalem", "Tirupathi (Rural)"]}
+              chartLabels={[
+                "Pakala",
+                "Ramchandrapuram",
+                "Chinnagottigallu",
+                "Chandragiri",
+                "Yerravanipalem",
+                "Tirupathi (Rural)",
+              ]}
               chartData={[
                 {
                   name: "Completed",

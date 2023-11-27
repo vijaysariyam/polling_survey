@@ -23,7 +23,7 @@ import { LoadingButton } from "@mui/lab";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const OpinionPollSurveyList = ({ showAlert }) => {
+const VotingPollSurveyList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
@@ -44,6 +44,9 @@ const OpinionPollSurveyList = ({ showAlert }) => {
     },
     {
       label: "Address",
+    },
+    {
+      label: "Survey Flag",
     },
     {
       label: "Neutral",
@@ -103,7 +106,7 @@ const OpinionPollSurveyList = ({ showAlert }) => {
 
   const renderEditButton = () => {
     return (
-      <Link to="/add-ticket1">
+      <Link to="/absent-ticket">
         <EditNoteIcon />
       </Link>
     );
@@ -189,16 +192,17 @@ const OpinionPollSurveyList = ({ showAlert }) => {
         <Divider />
 
         <MUIDataTable
-          title="Opinion Poll"
+          title=""
           columns={columns}
           data={[
             [
               "5454",
               "1",
-              "varun",
+              "Rama Rao",
               "23",
               "912345678",
               "RailWay New Colony",
+              "YES",
               renderNeutralRadio(),
               renderYCPRadio(),
               renderTDPRadio(),
@@ -211,10 +215,28 @@ const OpinionPollSurveyList = ({ showAlert }) => {
             [
               "5454",
               "2",
-              "ram",
+              "Srinivas",
               "23",
               "912345678",
               "RailWay New Colony",
+              "NO",
+              renderNeutralRadio(),
+              renderYCPRadio(),
+              renderTDPRadio(),
+              renderJSPRadio(),
+              renderBJPRadio(),
+              renderCongressRadio(),
+              renderOthersRadio(),
+              renderEditButton(),
+            ],
+            [
+              "5454",
+              "3",
+              "Varun",
+              "23",
+              "912345678",
+              "RailWay New Colony",
+              "YES",
               renderNeutralRadio(),
               renderYCPRadio(),
               renderTDPRadio(),
@@ -227,26 +249,11 @@ const OpinionPollSurveyList = ({ showAlert }) => {
             [
               "5454",
               "4",
-              "ganesh",
+              "Chandu",
               "23",
               "912345678",
               "RailWay New Colony",
-              renderNeutralRadio(),
-              renderYCPRadio(),
-              renderTDPRadio(),
-              renderJSPRadio(),
-              renderBJPRadio(),
-              renderCongressRadio(),
-              renderOthersRadio(),
-              renderEditButton(),
-            ],
-            [
-              "5454",
-              "4",
-              "teja",
-              "23",
-              "912345678",
-              "RailWay New Colony",
+              "NO",
               renderNeutralRadio(),
               renderYCPRadio(),
               renderTDPRadio(),
@@ -273,4 +280,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(OpinionPollSurveyList);
+})(VotingPollSurveyList);

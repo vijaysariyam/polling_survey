@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import {
   Grid,
   Container,
@@ -23,8 +22,8 @@ import Paper from "@mui/material/Paper";
 import TablePagination from "@mui/material/TablePagination";
 
 import Button from "@mui/material/Button";
-import ViewTicketsList from "../sections/reports/ViewTicketsList";
-import OpinionPollSurveyList from "../sections/reports/OpinionPollSurveyList";
+
+import VotingPollSurveyList from "../sections/reports/VotingPollSurveyList";
 
 function totalStats(name, ofOpen, OfResolved, ofCancelled, ofEscalated) {
   return { name, ofOpen, OfResolved, ofCancelled, ofEscalated };
@@ -32,7 +31,7 @@ function totalStats(name, ofOpen, OfResolved, ofCancelled, ofEscalated) {
 
 const statsRow = [totalStats("200", "100", "100")];
 
-const OpinionPollSurveyPage = ({ dashboard }) => {
+const VotingPollSurveyPage = ({ dashboard }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -49,12 +48,11 @@ const OpinionPollSurveyPage = ({ dashboard }) => {
     <Page title="View Tickets">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Opinion Poll Survey
+          Voting Poll Survey
         </Typography>
 
         <Card sx={{ p: 3 }}>
           <Typography sx={{ pb: 2 }}>Search by filter</Typography>
-          
 
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6} lg={3}>
@@ -183,7 +181,7 @@ const OpinionPollSurveyPage = ({ dashboard }) => {
 
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={12}>
-            <OpinionPollSurveyList />
+            <VotingPollSurveyList />
           </Grid>
         </Grid>
       </Container>
@@ -197,4 +195,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(OpinionPollSurveyPage);
+export default connect(mapStateToProps, null)(VotingPollSurveyPage);

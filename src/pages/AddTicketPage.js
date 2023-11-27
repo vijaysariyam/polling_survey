@@ -5,24 +5,25 @@ import {
   Box,
   TextField,
   Card,
-
   InputAdornment,
 } from "@mui/material";
 import AddCircleRoundedIcon from "@mui/icons-material/AddCircleRounded";
 import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 
-
 import Page from "../components/Page";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
-
-
+import { Link } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const AddTicketPage = ({ dashboard }) => {
   return (
     <Page title="Add Ticket">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
+          <Link to="/opinion-poll-survey">
+            <ArrowBackIcon />
+          </Link>{"   "}
           Add Ticket
         </Typography>
         <Card sx={{ p: 3 }}>

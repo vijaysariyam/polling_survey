@@ -7,44 +7,44 @@ const navConfig = [
     icon: <Iconify icon="ic:round-dashboard" width="24px" height="24px" />,
   },
   {
-    title: "Opinion Poll Survey ",
+    title: "Opinion Survey ",
     path: "/reports",
     icon: <Iconify icon="mdi:report-box-outline" width="24px" height="24px" />,
     children: [
       {
-        title: "Opinion Poll Survey",
+        title: "Survey",
         path: "opinion-poll-survey",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Opinion Poll Survey Results",
+        title: "Results",
         path: "/opinion-poll-survey-results",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "opinion survey reports",
+        title: "Reports",
         path: "/reports/survey",
       },
     ],
   },
   {
-    title: "Voting Poll Survey ",
+    title: "Voting Survey ",
     path: "/reports",
     icon: <Iconify icon="mdi:vote" width="24px" height="24px" />,
     children: [
       {
-        title: "Voting Poll Survey",
-        path: "opinion-poll-survey",
+        title: "Survey",
+        path: "voting-poll-survey",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Voting Poll Survey Results",
-        path: "/opinion-poll-survey-results",
+        title: "Results",
+        path: "/voting-poll-survey-results",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Voting survey reports",
-        path: "/reports/survey",
+        title: "reports",
+        path: "voting-survey-reports",
       },
       {
         title: "Voting polling reports",
@@ -59,7 +59,7 @@ const navConfig = [
         path: "voting-poll-results",
       },
       {
-        title: "Polling Results by State",
+        title: "Results by District",
         path: "polling-results-by-state",
       },
     ],
@@ -112,21 +112,6 @@ const navConfig = [
         title: "View Tickets",
         path: "/tickets",
       },
-
-      {
-        title: "No Vote Reason Ticket",
-        path: "/add-ticket1",
-        icon: (
-          <Iconify icon="majesticons:tickets-line" width="24px" height="24px" />
-        ),
-      },
-      {
-        title: "Absent Ticket",
-        path: "/absent-ticket",
-        icon: (
-          <Iconify icon="majesticons:tickets-line" width="24px" height="24px" />
-        ),
-      },
     ],
   },
 
@@ -175,6 +160,11 @@ const navConfig = [
         path: "/parties",
       },
       {
+        title: "States",
+        path: "/states",
+        icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+      },
+      {
         title: "Districts",
         path: "/districts",
       },
@@ -207,14 +197,8 @@ const navConfig = [
   },
 
   {
-    title: "States",
-    path: "/states",
-    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
-  },
-
-  {
     title: "Logout",
-    path: "/logout",
+    path: "/login",
     icon: <Iconify icon="ic:round-logout" width="24px" height="24px" />,
   },
 ];

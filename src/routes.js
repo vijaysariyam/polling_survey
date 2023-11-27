@@ -38,6 +38,9 @@ import VotingPollingReportsPage from "./pages/VotingPollingReportsPage";
 import ReportbySurveyandVotingReasonPage from "./pages/ReportbySurveyandVotingReasonPage";
 import VotingPollResultsPage from "./pages/VotingPollResultsPage";
 import VotingPollingResultsbyStatePage from "./pages/VotingPollingResultsbyStatePage";
+import VotingPollSurveyPage from "./pages/VotingPollSurveyPage";
+import VotingPollSurveyResultsPage from "./pages/VotingPollSurveyResultsPage";
+import VotingSurveyReportsPage from "./pages/VotingSurveyReportsPage";
 
 const Router = () => {
   return (
@@ -64,6 +67,15 @@ const Router = () => {
           <Route
             path="voting-polling-reports"
             element={<VotingPollingReportsPage />}
+          />
+          <Route path="voting-poll-survey" element={<VotingPollSurveyPage />} />
+          <Route
+            path="voting-poll-survey-results"
+            element={<VotingPollSurveyResultsPage />}
+          />
+          <Route
+            path="voting-survey-reports"
+            element={<VotingSurveyReportsPage />}
           />
           <Route
             path="report-by-survey-and-voting-reason"

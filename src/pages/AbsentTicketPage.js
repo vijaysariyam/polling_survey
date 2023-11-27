@@ -13,12 +13,18 @@ import CloudUploadRoundedIcon from "@mui/icons-material/CloudUploadRounded";
 import Page from "../components/Page";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
+import { Link } from "react-router-dom";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 
 const AbsentTicketPage = ({ dashboard }) => {
   return (
     <Page title="Add Ticket">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
+          <Link to="/voting-poll-survey">
+            <ArrowBackIcon />
+          </Link>
+          {"   "}
           Absent Ticket
         </Typography>
 

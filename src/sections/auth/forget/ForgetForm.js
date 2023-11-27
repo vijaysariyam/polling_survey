@@ -23,7 +23,7 @@ const ForgetForm = ({ showAlert }) => {
   const [formValues, setFormValues] = useState(null);
 
   const LoginSchema = Yup.object().shape({
-    username: Yup.string().required("Username is required"),
+    username: Yup.string().required("Phone Number is required"),
   });
 
   const defaultValues = {
@@ -84,7 +84,7 @@ const ForgetForm = ({ showAlert }) => {
   return (
     <FormProvider methods={methods} onSubmit={handleSubmit(onSubmit)}>
       <Stack my={3} spacing={3}>
-        <RHFTextField name="username" label="Username" />
+        <RHFTextField name="username" label="Phone" />
       </Stack>
 
       <LoadingButton fullWidth loading={isLoading} size="large" type="submit" variant="contained">

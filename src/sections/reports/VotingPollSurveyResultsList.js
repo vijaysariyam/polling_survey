@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import "@fontsource/inter";
 import {
   Typography,
@@ -23,30 +22,18 @@ import { LoadingButton } from "@mui/lab";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const OpinionPollSurveyList = ({ showAlert }) => {
+const VotingPollSurveyResultsList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "Voter ID",
+      label: "Distract Name",
     },
     {
-      label: "Part SL NO",
+      label: "Constituency Name",
     },
     {
-      label: "Father Name",
-    },
-    {
-      label: "Age",
-    },
-    {
-      label: "Phone",
-    },
-    {
-      label: "Address",
-    },
-    {
-      label: "Neutral",
+      label: "Constituency Votes",
     },
     {
       label: "YCP",
@@ -58,16 +45,13 @@ const OpinionPollSurveyList = ({ showAlert }) => {
       label: "JSP",
     },
     {
-      label: "BJP",
-    },
-    {
       label: "Congress",
     },
     {
-      label: "Others",
+      label: "BJP",
     },
     {
-      label: "Reason",
+      label: "Others",
     },
   ];
 
@@ -102,11 +86,7 @@ const OpinionPollSurveyList = ({ showAlert }) => {
   };
 
   const renderEditButton = () => {
-    return (
-      <Link to="/add-ticket1">
-        <EditNoteIcon />
-      </Link>
-    );
+    return <EditNoteIcon />;
   };
 
   const NeutralRadio = styled(Radio)({
@@ -189,73 +169,51 @@ const OpinionPollSurveyList = ({ showAlert }) => {
         <Divider />
 
         <MUIDataTable
-          title="Opinion Poll"
+          title=""
           columns={columns}
           data={[
             [
-              "5454",
-              "1",
-              "varun",
-              "23",
-              "912345678",
-              "RailWay New Colony",
-              renderNeutralRadio(),
-              renderYCPRadio(),
-              renderTDPRadio(),
-              renderJSPRadio(),
-              renderBJPRadio(),
-              renderCongressRadio(),
-              renderOthersRadio(),
-              renderEditButton(),
+              "District 1",
+              "Constituency 1",
+              "45454",
+              "2354545",
+              "12115",
+              "4545",
+              "454",
+              "4545",
+              "45878",
             ],
             [
-              "5454",
-              "2",
-              "ram",
-              "23",
-              "912345678",
-              "RailWay New Colony",
-              renderNeutralRadio(),
-              renderYCPRadio(),
-              renderTDPRadio(),
-              renderJSPRadio(),
-              renderBJPRadio(),
-              renderCongressRadio(),
-              renderOthersRadio(),
-              renderEditButton(),
-            ],
-            [
-              "5454",
-              "4",
-              "ganesh",
-              "23",
-              "912345678",
-              "RailWay New Colony",
-              renderNeutralRadio(),
-              renderYCPRadio(),
-              renderTDPRadio(),
-              renderJSPRadio(),
-              renderBJPRadio(),
-              renderCongressRadio(),
-              renderOthersRadio(),
-              renderEditButton(),
-            ],
-            [
-              "5454",
-              "4",
-              "teja",
-              "23",
-              "912345678",
-              "RailWay New Colony",
-              renderNeutralRadio(),
-              renderYCPRadio(),
-              renderTDPRadio(),
-              renderJSPRadio(),
-              renderBJPRadio(),
-              renderCongressRadio(),
-              renderOthersRadio(),
-              renderEditButton(),
-            ],
+              "District 1",
+              "Constituency 1",
+              "45454",
+              "2354545",
+              "12115",
+              "4545",
+              "454",
+              "4545",
+              "45878",
+            ],  [
+              "District 1",
+              "Constituency 1",
+              "45454",
+              "2354545",
+              "12115",
+              "4545",
+              "454",
+              "4545",
+              "45878",
+            ],  [
+              "District 1",
+              "Constituency 1",
+              "45454",
+              "2354545",
+              "12115",
+              "4545",
+              "454",
+              "4545",
+              "45878",
+            ],  
           ]}
           options={options}
         />
@@ -273,4 +231,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(OpinionPollSurveyList);
+})(VotingPollSurveyResultsList);

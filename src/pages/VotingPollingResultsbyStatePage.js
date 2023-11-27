@@ -59,7 +59,7 @@ const VotingPollingResultsbyStatePage = ({ dashboard }) => {
     <Page title="View Tickets">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Polling Result by State
+          Result By District
         </Typography>
 
         <Card sx={{ p: 3 }}>
