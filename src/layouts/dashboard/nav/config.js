@@ -13,11 +13,7 @@ const navConfig = [
   //     <Iconify icon="fluent:person-edit-20-filled" width="24px" height="24px" />
   //   ),
   // },
-  {
-    title: "Add User",
-    path: "/user-registration",
-    icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
-  },
+
   {
     title: "View User",
     path: "/view-user",
@@ -76,6 +72,11 @@ const navConfig = [
     title: "Add Poll Survey",
     path: "/add-poll-survey",
     icon: <Iconify icon="ph:note-duotone" width="24px" height="24px" />,
+  },
+  {
+    title: "Option Poll Survey",
+    path: "/option-poll-survey",
+    icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
   },
   {
     title: "Voter and Volunteer Mapping",

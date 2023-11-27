@@ -47,7 +47,6 @@ const PartsPage = ({ dashboard }) => {
               <TextField label="Select Division" fullWidth select />
               <TextField label="Select Sachivalayam " fullWidth select />
               <TextField label="Part Number " fullWidth />
-              <TextField label="Part SL Number " fullWidth />
               <TextField label="Male Votes " fullWidth />
               <TextField label="Female Votes" fullWidth />
               <TextField label="Tg Votes" fullWidth />
