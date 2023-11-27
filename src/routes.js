@@ -30,7 +30,9 @@ import DesignationPage from "./pages/DesignationPage";
 import ViewVoterPage from "./pages/ViewVoterPage";
 import UserMappingPage from "./pages/UserMappingPage";
 import AbsentTicketPage from "./pages/AbsentTicketPage";
-import OptionPollSurveyPage from "./pages/OptionPollSurveyPage";
+import OpinionPollSurveyPage from "./pages/OpinionPollSurveyPage";
+import OptionPollSurveyResultsPage from "./pages/OpinionPollSurveyResultsPage";
+import OpinionPollSurveyResultsPage from "./pages/OpinionPollSurveyResultsPage";
 
 const Router = () => {
   return (
@@ -55,7 +57,14 @@ const Router = () => {
             element={<VoterRegistrationPage />}
           />
           <Route path="add-poll-survey" element={<AddPollSurveyPage />} />
-          <Route path="option-poll-survey" element={<OptionPollSurveyPage />} />
+          <Route
+            path="opinion-poll-survey"
+            element={<OpinionPollSurveyPage />}
+          />{" "}
+          <Route
+            path="opinion-poll-survey-results"
+            element={<OpinionPollSurveyResultsPage />}
+          />
           <Route path="add-ticket1" element={<AddTicketPage />} />
           <Route path="absent-ticket" element={<AbsentTicketPage />} />
           <Route

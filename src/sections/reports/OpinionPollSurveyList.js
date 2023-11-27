@@ -22,7 +22,7 @@ import { LoadingButton } from "@mui/lab";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
 
-const OptionPollSurveyList = ({ showAlert }) => {
+const OpinionPollSurveyList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
@@ -184,7 +184,7 @@ const OptionPollSurveyList = ({ showAlert }) => {
         <Divider />
      
         <MUIDataTable
-          title="Option Poll"
+          title="Opinion Poll"
           columns={columns}
           data={[
             [
@@ -266,4 +266,4 @@ const mapStateToProps = (state) => {
 
 export default connect(mapStateToProps, {
   showAlert,
-})(OptionPollSurveyList);
+})(OpinionPollSurveyList);

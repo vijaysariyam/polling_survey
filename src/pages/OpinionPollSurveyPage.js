@@ -23,7 +23,7 @@ import TablePagination from "@mui/material/TablePagination";
 
 import Button from "@mui/material/Button";
 import ViewTicketsList from "../sections/reports/ViewTicketsList";
-import OptionPollSurveyList from "../sections/reports/OptionPollSurveyList";
+import OpinionPollSurveyList from "../sections/reports/OpinionPollSurveyList";
 
 function totalStats(name, ofOpen, OfResolved, ofCancelled, ofEscalated) {
   return { name, ofOpen, OfResolved, ofCancelled, ofEscalated };
@@ -31,7 +31,7 @@ function totalStats(name, ofOpen, OfResolved, ofCancelled, ofEscalated) {
 
 const statsRow = [totalStats("200", "100", "100")];
 
-const OptionPollSurveyPage = ({ dashboard }) => {
+const OpinionPollSurveyPage = ({ dashboard }) => {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
 
@@ -48,7 +48,7 @@ const OptionPollSurveyPage = ({ dashboard }) => {
     <Page title="View Tickets">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Option Poll Survey
+          Opinion Poll Survey
         </Typography>
 
         <Card sx={{ p: 3 }}>
@@ -181,7 +181,7 @@ const OptionPollSurveyPage = ({ dashboard }) => {
 
         <Grid container spacing={3}>
           <Grid item xs={12} md={6} lg={12}>
-            <OptionPollSurveyList />
+            <OpinionPollSurveyList />
           </Grid>
         </Grid>
       </Container>
@@ -195,4 +195,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(OptionPollSurveyPage);
+export default connect(mapStateToProps, null)(OpinionPollSurveyPage);
