@@ -29,6 +29,9 @@ const SachivalayamList = ({ showAlert }) => {
       label: "District Name",
     },
     {
+      label: "Constituency Name",
+    },
+    {
       label: "Mandal Name",
     },
     {
@@ -78,6 +81,7 @@ const SachivalayamList = ({ showAlert }) => {
           data={[
             [
               "District - 1",
+              "constituency - 1",
               "Mandal - 1",
               "DAMALACHERUVU",
               "Uppara Palli",
@@ -85,6 +89,7 @@ const SachivalayamList = ({ showAlert }) => {
             ],
             [
               "District - 1",
+              "constituency - 2",
               "Mandal - 1",
               "MOGARALA",
               "Padiputlabailu",
@@ -92,6 +97,7 @@ const SachivalayamList = ({ showAlert }) => {
             ],
             [
               "District - 1",
+              "constituency - 3",
               "Mandal - 1",
               "NENDRAGUNTA",
               "Gadanki",

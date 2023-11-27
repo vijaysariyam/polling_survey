@@ -6,6 +6,65 @@ const navConfig = [
     path: "/dashboard",
     icon: <Iconify icon="ic:round-dashboard" width="24px" height="24px" />,
   },
+  {
+    title: "Opinion Survey ",
+    path: "/reports",
+    icon: <Iconify icon="mdi:report-box-outline" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Survey",
+        path: "opinion-poll-survey",
+        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
+      },
+      {
+        title: "Results",
+        path: "/opinion-poll-survey-results",
+        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
+      },
+      {
+        title: "Reports",
+        path: "/reports/survey",
+      },
+    ],
+  },
+  {
+    title: "Voting Survey ",
+    path: "/reports",
+    icon: <Iconify icon="mdi:vote" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Survey",
+        path: "voting-poll-survey",
+        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
+      },
+      {
+        title: "Results",
+        path: "/voting-poll-survey-results",
+        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
+      },
+      {
+        title: "reports",
+        path: "voting-survey-reports",
+      },
+      {
+        title: "Voting polling reports",
+        path: "voting-polling-reports",
+      },
+      {
+        title: "Report by Survey and Voting Reason",
+        path: "report-by-survey-and-voting-reason",
+      },
+      {
+        title: "Voting Poll Results",
+        path: "voting-poll-results",
+      },
+      {
+        title: "Results by District",
+        path: "polling-results-by-state",
+      },
+    ],
+  },
+
   // {
   //   title: "Voters",
   //   path: "/voters",
@@ -14,40 +73,48 @@ const navConfig = [
   //   ),
   // },
   {
-    title: "Add User",
-    path: "/user-registration",
-    icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
-  },
-  {
-    title: "View User",
-    path: "/view-user",
+    title: "User Management",
+    path: "/reports",
     icon: <Iconify icon="ic:baseline-people" width="24px" height="24px" />,
-  },
-  {
-    title: "Add Voter",
-    path: "/voter-registration",
-    icon: (
-      <Iconify icon="icon-park-outline:people" width="24px" height="24px" />
-    ),
-  },
-  {
-    title: "View Voter",
-    path: "/vew-voter",
-    icon: <Iconify icon="formkit:people" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Add User",
+        path: "user-registration",
+      },
+      {
+        title: "View User",
+        path: "/view-user",
+      },
+    ],
   },
 
   {
-    title: "Add Ticket",
-    path: "/add-ticket",
-    icon: (
-      <Iconify icon="majesticons:tickets-line" width="24px" height="24px" />
-    ),
+    title: "Voter Management",
+    path: "/reports",
+    icon: <Iconify icon="formkit:people" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Add Voter",
+        path: "/voter-registration",
+      },
+      {
+        title: "View Voter",
+        path: "/view-voter",
+      },
+    ],
   },
   {
-    title: "View Tickets",
-    path: "/tickets",
+    title: "Ticket Management",
+    path: "/reports",
     icon: <Iconify icon="ion:ticket" width="24px" height="24px" />,
+    children: [
+      {
+        title: "View Tickets",
+        path: "/tickets",
+      },
+    ],
   },
+
   // {
   //   title: "Admin",
   //   path: "/admin",
@@ -64,26 +131,74 @@ const navConfig = [
   //     },
   //   ],
   // },
-
   {
-    title: "Add Poll Survey",
-    path: "/add-poll-survey",
-    icon: <Iconify icon="ph:note-duotone" width="24px" height="24px" />,
-  },
-  {
-    title: "Voter and Volunteer Mapping",
-    path: "/voter-and-volunteer-mapping",
+    title: "Configuration",
+    path: "/reports",
     icon: <Iconify icon="ri:mind-map" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Voter and Volunteer Mapping",
+        path: "/voter-and-volunteer-mapping",
+      },
+      {
+        title: "User Mapping",
+        path: "/user-mapping",
+      },
+    ],
   },
   {
-    title: "Sachivalayam",
-    path: "/sachivalayam",
-    icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+    title: "Administration",
+    path: "/admin",
+    icon: <Iconify icon="eos-icons:admin" width="24px" height="24px" />,
+    children: [
+      {
+        title: "Designations",
+        path: "/designations",
+      },
+      {
+        title: "Political Parties",
+        path: "/parties",
+      },
+      {
+        title: "States",
+        path: "/states",
+        icon: <Iconify icon="bi:building" width="24px" height="24px" />,
+      },
+      {
+        title: "Districts",
+        path: "/districts",
+      },
+      {
+        title: "Constituencies",
+        path: "/constituencies",
+      },
+
+      {
+        title: "Mandals",
+        path: "/mandals",
+      },
+      {
+        title: "Divisions",
+        path: "/divisions",
+      },
+      {
+        title: "Sachivalayam",
+        path: "/sachivalayam",
+      },
+      {
+        title: "Parts",
+        path: "/parts",
+      },
+      {
+        title: "Villages",
+        path: "/villages",
+      },
+    ],
   },
 
   {
     title: "Logout",
-    path: "/logout",
+    path: "/login",
     icon: <Iconify icon="ic:round-logout" width="24px" height="24px" />,
   },
 ];

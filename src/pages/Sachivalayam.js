@@ -39,9 +39,13 @@ const Sachivalayam = ({ dashboard }) => {
                 gap: "15px",
               }}
             >
-              <TextField label="Select District" fullWidth select />
+              {" "}
+              <TextField label="Select State" fullWidth select /> 
+              <TextField label="Select District" fullWidth select />{" "}
+              <TextField label="Select Constituency" fullWidth select />
               <TextField label="Select Mandal" fullWidth select />
               <TextField label="Select Division" fullWidth select />
+              <TextField label="Sachivalayam Name" fullWidth />
               <LoadingButton
                 variant="contained"
                 sx={{

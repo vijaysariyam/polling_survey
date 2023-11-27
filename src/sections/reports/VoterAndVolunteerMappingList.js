@@ -23,6 +23,9 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
 
   const columns = [
     {
+      label: "Select",
+    },
+    {
       label: "Voter ID",
     },
     {
@@ -34,10 +37,6 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
 
     {
       label: "Cell",
-    },
-
-    {
-      label: "Select",
     },
   ];
 
@@ -60,20 +59,26 @@ const VoterAndVolunteerMappingList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
+              renderCheckBox(),
               "IAX1916410",
               "SAMEEULLA SYED",
               "SILAR SAHEB SYED",
-              "",
-              renderCheckBox(),
+              "912345678",
             ],
             [
+              renderCheckBox(),
               "IAX1916378",
               "ZEENAT SYED ",
               "AMEEULLA SYED",
-              "",
-              renderCheckBox(),
+              "912345678",
             ],
-            ["IAX1897867", "SEEMA S", "CHAN BASHA S", "", renderCheckBox()],
+            [
+              renderCheckBox(),
+              "IAX1897867",
+              "SEEMA S",
+              "CHAN BASHA S",
+              "912345678",
+            ],
           ]}
           options={options}
         />

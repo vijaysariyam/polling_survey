@@ -3,9 +3,8 @@ import { Box, Card, CardHeader } from "@mui/material";
 import { fNumber } from "../../utils/formatNumber";
 import { useChart } from "../../components/chart";
 
-export default function BarChartWidget({ title, subheader, chartColors, chartLabels, chartData, ...other }) {
+export default function BarChartWidget({ title, subheader, chartLabels, chartData, ...other }) {
   const chartOptions = useChart({
-    colors: chartColors,
     chart: { stacked: true },
     plotOptions: {
       bar: {
@@ -19,12 +18,6 @@ export default function BarChartWidget({ title, subheader, chartColors, chartLab
     },
     xaxis: {
       categories: chartLabels,
-      labels: {
-        style: {
-          colors: "#000",
-          fontWeight: 600,
-        },
-      },
     },
   });
 

@@ -23,22 +23,35 @@ const VoterRegistrationPage = ({ dashboard }) => {
     <Page title="Voter Registration">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Voter Registration
+          Add Voter
         </Typography>
 
         <Card sx={{ p: 3 }}>
           <Typography sx={{ pb: 2 }}>Basic Info</Typography>
 
           <Grid container spacing={2} alignItems="center">
+            <Grid
+              item
+              xs={12}
+              md={6}
+              lg={2}
+              sx={{
+                marginLeft: "14px",
+              }}
+            >
+              <FormControlLabel
+                control={<CheckBox />}
+                label={
+                  <Typography style={{ marginLeft: "10px" }}>
+                    Is New Voter?
+                  </Typography>
+                }
+              />
+            </Grid>
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Voter Name *" fullWidth />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Voter ID *" fullWidth />
-            </Grid>
-
-            <Grid item xs={12} md={6} lg={6}>
               <FormControl>
                 <FormLabel id="demo-radio-buttons-group-label">
                   Guardian:
@@ -67,30 +80,27 @@ const VoterRegistrationPage = ({ dashboard }) => {
                 </RadioGroup>
               </FormControl>
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Guardian Name *" fullWidth />
             </Grid>
-
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Voter ID *" fullWidth />
+            </Grid>
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Gender" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Age *" fullWidth />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Volunteer ID *" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Gruhasaradhi ID *" fullWidth select />
             </Grid>
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Phone Number *" fullWidth select />
             </Grid>
-
             <Grid
               item
               xs={12}
@@ -118,7 +128,6 @@ const VoterRegistrationPage = ({ dashboard }) => {
                 rowsMax={8}
               />
             </Grid>
-
             <Grid item xs={12} md={6} lg={6}>
               <TextField
                 label="Current Address 1 *"
@@ -164,11 +173,11 @@ const VoterRegistrationPage = ({ dashboard }) => {
             </Grid>
 
             <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Booth Part No *" fullWidth select />
+              <TextField label="Part No *" fullWidth select />
             </Grid>
 
             <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Booth Assigned Part Sino" fullWidth select />
+              <TextField label="Part SL No" fullWidth />
             </Grid>
 
             <Grid

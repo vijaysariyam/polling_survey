@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Stack, IconButton, InputAdornment, TextField, Typography, Box } from "@mui/material";
+import { Stack, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 import Iconify from "../../../components/Iconify";
 import { FormProvider, RHFTextField } from "../../../components/hook-form";
@@ -62,12 +62,12 @@ const LoginForm = ({ showAlert, authSuccess }) => {
           }}
         />
 
-        <Box component="img" src="https://miro.medium.com/v2/resize:fit:1024/0*obnHri9w__4Cmhbj.jpg" sx={{ width: 150 }} />
+        <img className="captcha-image" src="https://miro.medium.com/v2/resize:fit:1024/0*obnHri9w__4Cmhbj.jpg" alt="captcha" />
 
         <RHFTextField name="captcha" label="Enter Captcha" />
       </Stack>
 
-      <Stack direction="row" alignItems="center" justifyContent="end" sx={{ my: 1 }}>
+      <Stack direction="row" alignItems="center" justifyContent="end" sx={{ my: 2 }}>
         <Link to="/forget-password" variant="subtitle2" underline="hover">
           Forgot password?
         </Link>

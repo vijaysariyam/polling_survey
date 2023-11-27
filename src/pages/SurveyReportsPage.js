@@ -9,17 +9,8 @@ export default function SurveyReportsPage() {
       <Container maxWidth="xl">
         <Box mb={5}>
           <Typography variant="h4" gutterBottom>
-            Survey Reports
+           Opinion Survey Reports
           </Typography>
-
-          <Breadcrumbs aria-label="breadcrumb" separator={<Iconify icon="eva:arrow-ios-forward-outline" />}>
-            <Link underline="hover" variant="body2" color="text.primary" href="../dashboard">
-              Dashboard
-            </Link>
-            <Typography variant="body2" color="inherit">
-              Survey Reports
-            </Typography>
-          </Breadcrumbs>
         </Box>
 
         <SurveyReportsList />
