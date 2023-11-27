@@ -12,10 +12,6 @@ const navConfig = [
     icon: <Iconify icon="mdi:report-box-outline" width="24px" height="24px" />,
     children: [
       {
-        title: "Add Poll Survey",
-        path: "/add-poll-survey",
-      },
-      {
         title: "Opinion Poll Survey",
         path: "opinion-poll-survey",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
@@ -49,6 +45,22 @@ const navConfig = [
       {
         title: "Voting survey reports",
         path: "/reports/survey",
+      },
+      {
+        title: "Voting polling reports",
+        path: "voting-polling-reports",
+      },
+      {
+        title: "Report by Survey and Voting Reason",
+        path: "report-by-survey-and-voting-reason",
+      },
+      {
+        title: "Voting Poll Results",
+        path: "voting-poll-results",
+      },
+      {
+        title: "Polling Results by State",
+        path: "polling-results-by-state",
       },
     ],
   },
@@ -193,7 +205,7 @@ const navConfig = [
       },
     ],
   },
-  
+
   {
     title: "States",
     path: "/states",

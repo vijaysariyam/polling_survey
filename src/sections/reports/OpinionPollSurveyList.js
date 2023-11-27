@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "@fontsource/inter";
 import {
   Typography,
@@ -101,7 +102,11 @@ const OpinionPollSurveyList = ({ showAlert }) => {
   };
 
   const renderEditButton = () => {
-    return <EditNoteIcon />;
+    return (
+      <Link to="/add-ticket1">
+        <EditNoteIcon />
+      </Link>
+    );
   };
 
   const NeutralRadio = styled(Radio)({
@@ -114,9 +119,9 @@ const OpinionPollSurveyList = ({ showAlert }) => {
   const YCPRadio = styled(Radio)({
     color: "green",
     "&.Mui-checked": {
-        color: "green",
+      color: "green",
     },
-    });
+  });
 
   const TDPRadio = styled(Radio)({
     color: "yellow",
@@ -182,7 +187,7 @@ const OpinionPollSurveyList = ({ showAlert }) => {
     <Card elevation={1}>
       <Stack>
         <Divider />
-     
+
         <MUIDataTable
           title="Opinion Poll"
           columns={columns}
@@ -204,51 +209,53 @@ const OpinionPollSurveyList = ({ showAlert }) => {
               renderEditButton(),
             ],
             [
-                "5454",
-                "",
-                "",
-                "23",
-                "912345678",
-                "RailWay New Colony",
-                renderNeutralRadio(),
-                renderYCPRadio(),
-                renderTDPRadio(),
-                renderJSPRadio(),
-                renderBJPRadio(),
-                renderCongressRadio(),
-                renderOthersRadio(),
-                renderEditButton(),
-              ],  [
-                "5454",
-                "",
-                "",
-                "23",
-                "912345678",
-                "RailWay New Colony",
-                renderNeutralRadio(),
-                renderYCPRadio(),
-                renderTDPRadio(),
-                renderJSPRadio(),
-                renderBJPRadio(),
-                renderCongressRadio(),
-                renderOthersRadio(),
-                renderEditButton(),
-              ],  [
-                "5454",
-                "",
-                "",
-                "23",
-                "912345678",
-                "RailWay New Colony",
-                renderNeutralRadio(),
-                renderYCPRadio(),
-                renderTDPRadio(),
-                renderJSPRadio(),
-                renderBJPRadio(),
-                renderCongressRadio(),
-                renderOthersRadio(),
-                renderEditButton(),
-              ],
+              "5454",
+              "",
+              "",
+              "23",
+              "912345678",
+              "RailWay New Colony",
+              renderNeutralRadio(),
+              renderYCPRadio(),
+              renderTDPRadio(),
+              renderJSPRadio(),
+              renderBJPRadio(),
+              renderCongressRadio(),
+              renderOthersRadio(),
+              renderEditButton(),
+            ],
+            [
+              "5454",
+              "",
+              "",
+              "23",
+              "912345678",
+              "RailWay New Colony",
+              renderNeutralRadio(),
+              renderYCPRadio(),
+              renderTDPRadio(),
+              renderJSPRadio(),
+              renderBJPRadio(),
+              renderCongressRadio(),
+              renderOthersRadio(),
+              renderEditButton(),
+            ],
+            [
+              "5454",
+              "",
+              "",
+              "23",
+              "912345678",
+              "RailWay New Colony",
+              renderNeutralRadio(),
+              renderYCPRadio(),
+              renderTDPRadio(),
+              renderJSPRadio(),
+              renderBJPRadio(),
+              renderCongressRadio(),
+              renderOthersRadio(),
+              renderEditButton(),
+            ],
           ]}
           options={options}
         />

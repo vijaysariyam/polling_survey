@@ -13,7 +13,7 @@ import SurveyReportsPage from "./pages/SurveyReportsPage";
 import TicketsPage from "./pages/TicketsPage";
 import UserRegistrationPage from "./pages/UserRegistrationPage";
 import VoterRegistrationPage from "./pages/VoterRegistrationPage";
-import AddPollSurveyPage from "./pages/AddPollSurveyPage";
+
 import AddTicketPage from "./pages/AddTicketPage";
 import ViewUserPage from "./pages/ViewUserPage";
 import VoterAndVolunteerMappingPage from "./pages/VoterAndVolunteerMappingPage";
@@ -31,8 +31,13 @@ import ViewVoterPage from "./pages/ViewVoterPage";
 import UserMappingPage from "./pages/UserMappingPage";
 import AbsentTicketPage from "./pages/AbsentTicketPage";
 import OpinionPollSurveyPage from "./pages/OpinionPollSurveyPage";
-import OptionPollSurveyResultsPage from "./pages/OpinionPollSurveyResultsPage";
+
 import OpinionPollSurveyResultsPage from "./pages/OpinionPollSurveyResultsPage";
+
+import VotingPollingReportsPage from "./pages/VotingPollingReportsPage";
+import ReportbySurveyandVotingReasonPage from "./pages/ReportbySurveyandVotingReasonPage";
+import VotingPollResultsPage from "./pages/VotingPollResultsPage";
+import VotingPollingResultsbyStatePage from "./pages/VotingPollingResultsbyStatePage";
 
 const Router = () => {
   return (
@@ -56,11 +61,26 @@ const Router = () => {
             path="voter-registration"
             element={<VoterRegistrationPage />}
           />
-          <Route path="add-poll-survey" element={<AddPollSurveyPage />} />
+          <Route
+            path="voting-polling-reports"
+            element={<VotingPollingReportsPage />}
+          />
+          <Route
+            path="report-by-survey-and-voting-reason"
+            element={<ReportbySurveyandVotingReasonPage />}
+          />
+          <Route
+            path="voting-poll-results"
+            element={<VotingPollResultsPage />}
+          />
+          <Route
+            path="polling-results-by-state"
+            element={<VotingPollingResultsbyStatePage />}
+          />
           <Route
             path="opinion-poll-survey"
             element={<OpinionPollSurveyPage />}
-          />{" "}
+          />
           <Route
             path="opinion-poll-survey-results"
             element={<OpinionPollSurveyResultsPage />}
