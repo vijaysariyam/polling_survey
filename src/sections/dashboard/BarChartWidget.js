@@ -3,9 +3,17 @@ import { Box, Card, CardHeader } from "@mui/material";
 import { fNumber } from "../../utils/formatNumber";
 import { useChart } from "../../components/chart";
 
-export default function BarChartWidget({ title, subheader, chartLabels, chartData, ...other }) {
+export default function BarChartWidget({
+  title,
+  subheader,
+  chartLabels,
+  chartData,
+  chartColors,
+  ...other
+}) {
   const chartOptions = useChart({
     chart: { stacked: true },
+    colors: chartColors,
     plotOptions: {
       bar: {
         borderRadius: 2,
@@ -22,11 +30,21 @@ export default function BarChartWidget({ title, subheader, chartLabels, chartDat
   });
 
   return (
-    <Card {...other}>
+    <Card
+      {...other}
+      sx={{
+        boxShadow: "0px 0px 5px #969696",
+      }}
+    >
       <CardHeader title={title} subheader={subheader} />
 
       <Box sx={{ mx: 3 }} dir="ltr">
-        <ReactApexChart type="bar" series={chartData} options={chartOptions} height={364} />
+        <ReactApexChart
+          type="bar"
+          series={chartData}
+          options={chartOptions}
+          height={364}
+        />
       </Box>
     </Card>
   );

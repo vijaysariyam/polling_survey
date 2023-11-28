@@ -13,6 +13,7 @@ import { LoadingButton } from "@mui/lab";
 import ViewUsersList from "../sections/reports/ViewUsersList";
 import Button from "@mui/material/Button";
 import VotingPollingReportsList from "../sections/reports/VotingPollingReportsList";
+import PollResultsBarChartWidget from "../sections/opinionPollSurveyResults/PollResultsBarChartWidget";
 
 const VotingPollingReportsPage = ({ dashboard }) => {
   return (
@@ -22,7 +23,7 @@ const VotingPollingReportsPage = ({ dashboard }) => {
           Voting Polling Reports
         </Typography>
 
-        <Card sx={{ p: 3 }}>
+        <Card sx={{ p: 3, mb:3}}>
           <Typography sx={{ pb: 2 }}>Search by filter</Typography>
 
           <Grid container spacing={2} alignItems="center">
@@ -55,6 +56,17 @@ const VotingPollingReportsPage = ({ dashboard }) => {
             </Grid>
           </Grid>
         </Card>
+        <PollResultsBarChartWidget
+                title=""
+                sx={{ height: "100%" }}
+                chartLabels={["YCP", "TDP", "JSP", "BJP", "Others"]}
+                chartData={[
+                  {
+                    name: "Total",
+                    data: ["150", 120, 100, 80, 50],
+                  },
+                ]}
+              />
 
         <Box p={3} />
         <VotingPollingReportsList />

@@ -1,11 +1,24 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
-import { NavLink as RouterLink, matchPath, useLocation } from "react-router-dom";
+import {
+  NavLink as RouterLink,
+  matchPath,
+  useLocation,
+} from "react-router-dom";
 import { alpha, useTheme, styled } from "@mui/material/styles";
-import { Box, List, Collapse, ListItemText, ListItemIcon, ListItemButton } from "@mui/material";
+import {
+  Box,
+  List,
+  Collapse,
+  ListItemText,
+  ListItemIcon,
+  ListItemButton,
+} from "@mui/material";
 import Iconify from "./Iconify";
 
-const ListItemStyle = styled((props) => <ListItemButton disableGutters {...props} />)(({ theme }) => ({
+const ListItemStyle = styled((props) => (
+  <ListItemButton disableGutters {...props} />
+))(({ theme }) => ({
   ...theme.typography.body2,
   height: 48,
   position: "relative",
@@ -44,12 +57,29 @@ function NavItem({ item, active }) {
   const activeRootStyle = {
     color: "text.white",
     fontWeight: "fontWeightMedium",
-    bgcolor: alpha(theme.palette.text.white, theme.palette.action.selectedOpacity),
+    // bgcolor: alpha(
+    //   theme.palette.text.white,
+    //   theme.palette.action.selectedOpacity
+    // ),
+    // bgcolor:alpha("#00AF01", theme.palette.action.selectedOpacity),
+    bgcolor: "#00AF01",
+    
+  };
+
+  const activeRootStyle2 = {
+    color: "text.white",
+    fontWeight: "fontWeightMedium",
+    bgcolor: alpha(
+      theme.palette.text.white,
+      theme.palette.action.selectedOpacity
+    ),
+    
   };
 
   const activeSubStyle = {
     color: "text.white",
     fontWeight: "fontWeightMedium",
+    bgcolor: "#00AF01",
   };
 
   if (children) {
@@ -58,13 +88,23 @@ function NavItem({ item, active }) {
         <ListItemStyle
           onClick={handleOpen}
           sx={{
-            ...(isActiveRoot && activeRootStyle),
+            ...(isActiveRoot && activeRootStyle2),
+            "&:hover":{
+              bgcolor: "#00AF01"
+            }
           }}
         >
           <ListItemIconStyle>{icon && icon}</ListItemIconStyle>
           <ListItemText disableTypography primary={title} />
           {info && info}
-          <Iconify icon={open ? "eva:arrow-ios-downward-fill" : "eva:arrow-ios-forward-fill"} sx={{ width: 16, height: 16, mx: 2 }} />
+          <Iconify
+            icon={
+              open
+                ? "eva:arrow-ios-downward-fill"
+                : "eva:arrow-ios-forward-fill"
+            }
+            sx={{ width: 16, height: 16, mx: 2 }}
+          />
         </ListItemStyle>
 
         <Collapse in={open} timeout="auto" unmountOnExit>
@@ -80,6 +120,9 @@ function NavItem({ item, active }) {
                   to={path}
                   sx={{
                     ...(isActiveSub && activeSubStyle),
+                    "&:hover":{
+                      bgcolor: "#00AF01"
+                    }
                   }}
                 >
                   <ListItemIconStyle>
@@ -93,7 +136,8 @@ function NavItem({ item, active }) {
                         alignItems: "center",
                         justifyContent: "center",
                         bgcolor: "text.disabled",
-                        transition: (theme) => theme.transitions.create("transform"),
+                        transition: (theme) =>
+                          theme.transitions.create("transform"),
                         ...(isActiveSub && {
                           transform: "scale(2)",
                           bgcolor: "primary.main",
@@ -117,6 +161,9 @@ function NavItem({ item, active }) {
       to={path}
       sx={{
         ...(isActiveRoot && activeRootStyle),
+        "&:hover":{
+          bgcolor: "#00AF01"
+        }
       }}
     >
       <ListItemIconStyle>{icon && icon}</ListItemIconStyle>
@@ -133,7 +180,8 @@ NavSection.propTypes = {
 export default function NavSection({ data, ...other }) {
   const { pathname } = useLocation();
 
-  const match = (path) => (path ? !!matchPath({ path, end: false }, pathname) : false);
+  const match = (path) =>
+    path ? !!matchPath({ path, end: false }, pathname) : false;
 
   return (
     <Box {...other}>

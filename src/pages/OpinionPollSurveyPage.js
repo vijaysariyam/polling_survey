@@ -49,12 +49,11 @@ const OpinionPollSurveyPage = ({ dashboard }) => {
     <Page title="View Tickets">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Opinion Poll Survey
+          Opinion Survey
         </Typography>
 
         <Card sx={{ p: 3 }}>
           <Typography sx={{ pb: 2 }}>Search by filter</Typography>
-          
 
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6} lg={3}>

@@ -21,13 +21,10 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
 
   const columns = [
     {
-      label: "District Name",
-    },
-    {
       label: "Constituency Name",
     },
     {
-      label: "Mandal",
+      label: "Mandal Name",
     },
     {
       label: "Panchayat",
@@ -64,7 +61,6 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "District 1",
               "Constituency 1",
               "Mandal 1",
               "Panchayat 1",
@@ -75,7 +71,6 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
               "Voting Reason 1",
             ],
             [
-              "District 1",
               "Constituency 1",
               "Mandal 1",
               "Panchayat 1",
@@ -86,7 +81,6 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
               "Voting Reason 1",
             ],
             [
-              "District 1",
               "Constituency 1",
               "Mandal 1",
               "Panchayat 1",
@@ -97,7 +91,6 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
               "Voting Reason 1",
             ],
             [
-              "District 1",
               "Constituency 1",
               "Mandal 1",
               "Panchayat 1",
@@ -108,7 +101,6 @@ const ReportbySurveyandVotingReasonList = ({ showAlert }) => {
               "Voting Reason 1",
             ],
             [
-              "District 1",
               "Constituency 1",
               "Mandal 1",
               "Panchayat 1",

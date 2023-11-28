@@ -7,7 +7,6 @@ import {
   TextField,
   Card,
 } from "@mui/material";
-import makeStyles from "@mui/styles/makeStyles";
 import Page from "../components/Page";
 import { connect } from "react-redux";
 import { LoadingButton } from "@mui/lab";
@@ -40,24 +39,12 @@ import {
   pendingColor,
 } from "../utils/constants";
 
-// Define custom styles
-const useStyles = makeStyles({
-  textField: {
-    "& .MuiInputBase-input": {
-      height: "10px", // Adjust the height as per your requirement
-      fontSize: "3px",
-      width: "110px",
-    },
-  },
-});
-
-const DashboardApp = ({ dashboard }) => {
-  const classes = useStyles();
+const VotingPollDashBoardPage = ({ dashboard }) => {
   return (
     <Page title="Dashboard">
       <Container maxWidth="xl">
         <Typography variant="h4" sx={{ mb: 5 }}>
-          Opinion Dashboard
+          Voting Poll Dashboard
         </Typography>
 
         <Card sx={{ p: 3 }}>
@@ -150,7 +137,12 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "Cancel", value: 876 },
                 { label: "Escalated", value: 2542 },
               ]}
-              chartColors={[OpenColor, ResolvedColor, CancelColor, EscalatedColor]}
+              chartColors={[
+                OpenColor,
+                ResolvedColor,
+                CancelColor,
+                EscalatedColor,
+              ]}
             />
           </Grid>
 
@@ -191,7 +183,14 @@ const DashboardApp = ({ dashboard }) => {
                 { label: "55-65", value: 2415 },
                 { label: "65+", value: 1443 },
               ]}
-              chartColors={[Age1Color, Age2Color, Age3Color, Age4Color, Age5Color, Age6Color]}
+              chartColors={[
+                Age1Color,
+                Age2Color,
+                Age3Color,
+                Age4Color,
+                Age5Color,
+                Age6Color,
+              ]}
             />
           </Grid>
 
@@ -227,4 +226,4 @@ const mapStateToProps = (state) => {
   };
 };
 
-export default connect(mapStateToProps, null)(DashboardApp);
+export default connect(mapStateToProps, null)(VotingPollDashBoardPage);

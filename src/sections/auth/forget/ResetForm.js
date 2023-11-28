@@ -3,7 +3,13 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Stack, IconButton, InputAdornment, TextField, Typography } from "@mui/material";
+import {
+  Stack,
+  IconButton,
+  InputAdornment,
+  TextField,
+  Typography,
+} from "@mui/material";
 import { LoadingButton } from "@mui/lab";
 import { FormProvider, RHFTextField } from "../../../components/hook-form";
 import { connect } from "react-redux";
@@ -16,7 +22,9 @@ const ResetForm = ({ showAlert }) => {
 
   const LoginSchema = Yup.object().shape({
     opassword: Yup.string().required("Old Password is required"),
-    password: Yup.string().required("Password is required").min(8, "Password must be at least 8 characters"),
+    password: Yup.string()
+      .required("Password is required")
+      .min(8, "Password must be at least 8 characters"),
     cpassword: Yup.string().required("Confirm Password is required"),
   });
 
@@ -35,7 +43,10 @@ const ResetForm = ({ showAlert }) => {
 
   const onSubmit = async (data) => {
     setLoading(true);
-    navigate("/dashboard", { replace: true });
+
+    // check if user already change there old auto genarated password or not
+
+    navigate("/login", { replace: true });
     setLoading(false);
   };
 
@@ -49,7 +60,13 @@ const ResetForm = ({ showAlert }) => {
         <RHFTextField name="cpassword" label="Confirm Password" />
       </Stack>
 
-      <LoadingButton fullWidth loading={isLoading} size="large" type="submit" variant="contained">
+      <LoadingButton
+        fullWidth
+        loading={isLoading}
+        size="large"
+        type="submit"
+        variant="contained"
+      >
         Submit
       </LoadingButton>
     </FormProvider>

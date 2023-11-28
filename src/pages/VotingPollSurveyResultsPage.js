@@ -74,7 +74,30 @@ const VotingPollSurveyResultsPage = ({ dashboard }) => {
         <Typography variant="h4" sx={{ mb: 5 }}>
           Voting Poll Survey Results
         </Typography>
+        <Card sx={{ p: 3, mb: 3 }}>
+          <Typography sx={{ pb: 2 }}>Search by filter</Typography>
 
+          <Grid container spacing={2} alignItems="center">
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Mandal" fullWidth select />
+            </Grid>
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Division" fullWidth select />
+            </Grid>
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Sachivalayam" fullWidth select />
+            </Grid>
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Part/Booth No" fullWidth select />
+            </Grid>{" "}
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Village" fullWidth select />
+            </Grid>
+            <Grid item xs={12} md={6} lg={3}>
+              <LoadingButton variant="contained">Search</LoadingButton>
+            </Grid>
+          </Grid>
+        </Card>
         <Card sx={{ p: 3 }}>
           <Typography sx={{ pb: 2 }}>Survey %</Typography>
 
@@ -135,7 +158,7 @@ const VotingPollSurveyResultsPage = ({ dashboard }) => {
                     fontWeight: "bold",
                   }}
                 >
-                  Total Votes
+                  Constituency Votes
                 </TableCell>
                 <TableCell
                   align="center"

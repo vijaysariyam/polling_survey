@@ -32,7 +32,9 @@ const Nav = ({ account, openNav, onCloseNav }) => {
   }, [pathname]);
 
   const renderContent = (
-    <Scrollbar>
+    <Scrollbar sx={{
+      backgroundImage: 'linear-gradient(to bottom, #013157,#013157, #006D4D)'
+    }}>
       <Box sx={{ px: 2.5, py: 3, display: "flex", justifyContent: "center", alignItems: "center" }}>
         <Box component="img" src={PUBLIC_URL + "/static/logo.png"} sx={{ width: "60px", height: "60px" }} />
 

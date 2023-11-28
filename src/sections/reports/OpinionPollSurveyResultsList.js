@@ -21,19 +21,29 @@ import { showAlert } from "../../actions/alert";
 import { LoadingButton } from "@mui/lab";
 import EditNoteIcon from "@mui/icons-material/EditNote";
 import DeleteForeverIcon from "@mui/icons-material/DeleteForever";
+import KeyboardDoubleArrowUpIcon from "@mui/icons-material/KeyboardDoubleArrowUp";
 
 const OpinionPollSurveyResultsList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "Distract Name",
+      label: "Mandal Name",
     },
     {
-      label: "Constituency Name",
+      label: "Division Name",
     },
     {
-      label: "Constituency Votes",
+      label: "Sachivalayam Name",
+    },
+    {
+      label: "Part No",
+    },
+    {
+      label: "Village Name",
+    },
+    {
+      label: "Total Votes",
     },
     {
       label: "YCP",
@@ -163,6 +173,27 @@ const OpinionPollSurveyResultsList = ({ showAlert }) => {
     return <OthersRadio />;
   };
 
+  const renderHighVote = () => {
+    return (
+      <Typography
+        sx={{
+          display: "flex",
+          alignItems: "center",
+        }}
+      >
+        45445{" "}
+        {
+          <KeyboardDoubleArrowUpIcon
+            sx={{
+              color: "red",
+              fontSize: "30px",
+            }}
+          />
+        }
+      </Typography>
+    );
+  };
+
   return (
     <Card elevation={1}>
       <Stack>
@@ -173,9 +204,42 @@ const OpinionPollSurveyResultsList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "District 1",
-              "Constituency 1",
-              "45454",
+              "Manadal 1",
+              "Division 1",
+              "Sachivalayam 1",
+              "1",
+              "Village 1",
+              "24,22,082",
+              "2354545",
+              "12115",
+              renderHighVote(),
+              "454",
+              "4545",
+              "45878",
+            ],
+            [
+              "Manadal 2",
+              "Division 2",
+              "Sachivalayam 2",
+              "2",
+              "Village 2",
+
+              "23,22,082",
+              "2354545",
+              "12115",
+              "4545",
+              "454",
+              renderHighVote(),
+              "45878",
+            ],
+            [
+              "Manadal 3",
+              "Division 3",
+              "Sachivalayam 3",
+              "3",
+              "Village 3",
+
+              "19,22,082",
               "2354545",
               "12115",
               "4545",
@@ -184,36 +248,19 @@ const OpinionPollSurveyResultsList = ({ showAlert }) => {
               "45878",
             ],
             [
-              "District 1",
-              "Constituency 1",
-              "45454",
+              "Manadal 4  ",
+              "Division 4",
+              "Sachivalayam 4",
+              "4",
+              "Village 4",
+              "21,22,082",
               "2354545",
               "12115",
               "4545",
               "454",
               "4545",
               "45878",
-            ],  [
-              "District 1",
-              "Constituency 1",
-              "45454",
-              "2354545",
-              "12115",
-              "4545",
-              "454",
-              "4545",
-              "45878",
-            ],  [
-              "District 1",
-              "Constituency 1",
-              "45454",
-              "2354545",
-              "12115",
-              "4545",
-              "454",
-              "4545",
-              "45878",
-            ],  
+            ],
           ]}
           options={options}
         />

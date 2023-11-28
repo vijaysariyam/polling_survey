@@ -28,11 +28,15 @@ const OpinionPollSurveyList = ({ showAlert }) => {
 
   const columns = [
     {
+      label: "Part SL NO",
+    },
+    {
       label: "Voter ID",
     },
     {
-      label: "Part SL NO",
+      label: "Voter Name",
     },
+
     {
       label: "Father Name",
     },
@@ -193,9 +197,10 @@ const OpinionPollSurveyList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "5454",
               "1",
+              "5454",
               "varun",
+              "Rama RAO",
               "23",
               "912345678",
               "RailWay New Colony",
@@ -209,9 +214,10 @@ const OpinionPollSurveyList = ({ showAlert }) => {
               renderEditButton(),
             ],
             [
+              "1",
               "5454",
-              "2",
-              "ram",
+              "varun",
+              "Rama RAO",
               "23",
               "912345678",
               "RailWay New Colony",
@@ -225,9 +231,10 @@ const OpinionPollSurveyList = ({ showAlert }) => {
               renderEditButton(),
             ],
             [
+              "1",
               "5454",
-              "4",
-              "ganesh",
+              "varun",
+              "Rama RAO",
               "23",
               "912345678",
               "RailWay New Colony",
@@ -241,9 +248,10 @@ const OpinionPollSurveyList = ({ showAlert }) => {
               renderEditButton(),
             ],
             [
+              "1",
               "5454",
-              "4",
-              "teja",
+              "varun",
+              "Rama RAO",
               "23",
               "912345678",
               "RailWay New Colony",

@@ -2,66 +2,75 @@ import Iconify from "../../../components/Iconify";
 
 const navConfig = [
   {
-    title: "Dashboard",
+    title: "Opinion Dashboard",
     path: "/dashboard",
     icon: <Iconify icon="ic:round-dashboard" width="24px" height="24px" />,
   },
   {
+    title: "Voting Poll Dashboard",
+    path: "/voting-poll-dashboard",
+    icon: <Iconify icon="ic:round-dashboard" width="24px" height="24px" />,
+  },
+
+  // Option Survey with Sub Menu
+  {
     title: "Opinion Survey ",
-    path: "/reports",
+    path: "/opinionsurvey",
     icon: <Iconify icon="mdi:report-box-outline" width="24px" height="24px" />,
     children: [
       {
-        title: "Survey",
-        path: "opinion-poll-survey",
+        title: "Opinion Survey",
+        path: "/opinionsurvey/survey",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Results",
-        path: "/opinion-poll-survey-results",
+        title: "Opinion Results",
+        path: "/opinionsurvey/results",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Reports",
-        path: "/reports/survey",
+        title: "Opinion Reports",
+        path: "/opinionsurvey/reports",
       },
     ],
   },
+
+  // Voting Poll Survey with Sub Menu
   {
-    title: "Voting Survey ",
-    path: "/reports",
+    title: "Voting Poll Survey ",
+    path: "/voting-poll-survey",
     icon: <Iconify icon="mdi:vote" width="24px" height="24px" />,
     children: [
       {
-        title: "Survey",
-        path: "voting-poll-survey",
+        title: "Voting Poll Survey",
+        path: "/voting-poll-survey/survey",
         icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
-      },
-      {
-        title: "Results",
-        path: "/voting-poll-survey-results",
-        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
-      },
-      {
-        title: "reports",
-        path: "voting-survey-reports",
-      },
-      {
-        title: "Voting polling reports",
-        path: "voting-polling-reports",
-      },
-      {
-        title: "Report by Survey and Voting Reason",
-        path: "report-by-survey-and-voting-reason",
       },
       {
         title: "Voting Poll Results",
-        path: "voting-poll-results",
+        path: "/voting-poll-survey/results",
+        icon: <Iconify icon="ic:round-person" width="24px" height="24px" />,
       },
       {
-        title: "Results by District",
-        path: "polling-results-by-state",
+        title: "Voting Poll Reports",
+        path: "/voting-poll-survey/reports",
       },
+      // {
+      //   title: "Voting polling reports",
+      //   path: "voting-polling-reports",
+      // },
+      {
+        title: "Report by Survey and Voting Reason",
+        path: "/voting-poll-survey/report-by-survey-and-voting-reason",
+      },
+      // {
+      //   title: "Voting Poll Results",
+      //   path: "voting-poll-results",
+      // },
+      // {
+      //   title: "Results by District",
+      //   path: "polling-results-by-state",
+      // },
     ],
   },
 
@@ -72,22 +81,27 @@ const navConfig = [
   //     <Iconify icon="fluent:person-edit-20-filled" width="24px" height="24px" />
   //   ),
   // },
+
+
+  // User Management with Sub Menu
   {
     title: "User Management",
-    path: "/reports",
+    path: "/user-management",
     icon: <Iconify icon="ic:baseline-people" width="24px" height="24px" />,
     children: [
       {
         title: "Add User",
-        path: "user-registration",
+        path: "/user-management/user-registration",
       },
       {
         title: "View User",
-        path: "/view-user",
+        path: "/user-management/view-user",
       },
     ],
   },
 
+
+  // Voter Management with Sub Menu
   {
     title: "Voter Management",
     path: "/reports",

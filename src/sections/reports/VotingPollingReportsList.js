@@ -21,14 +21,9 @@ const VotingPollingReportsList = ({ showAlert }) => {
 
   const columns = [
     {
-      label: "District Name",
-    },
-    {
       label: "Constituency Name",
     },
-    {
-      label: "MLA Candidate Votes",
-    },
+
     {
       label: "Constituency Votes",
     },
@@ -63,9 +58,8 @@ const VotingPollingReportsList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "District 1",
               "Constituency 1",
-              "MLA Candidate Votes",
+
               "Constituency Votes",
               "Polled Votes",
               "%",
@@ -73,9 +67,8 @@ const VotingPollingReportsList = ({ showAlert }) => {
               "%",
             ],
             [
-              "District 1",
               "Constituency 1",
-              "MLA Candidate Votes",
+
               "Constituency Votes",
               "Polled Votes",
               "%",
@@ -83,9 +76,8 @@ const VotingPollingReportsList = ({ showAlert }) => {
               "%",
             ],
             [
-              "District 1",
               "Constituency 1",
-              "MLA Candidate Votes",
+
               "Constituency Votes",
               "Polled Votes",
               "%",
@@ -93,9 +85,8 @@ const VotingPollingReportsList = ({ showAlert }) => {
               "%",
             ],
             [
-              "District 1",
               "Constituency 1",
-              "MLA Candidate Votes",
+
               "Constituency Votes",
               "Polled Votes",
               "%",

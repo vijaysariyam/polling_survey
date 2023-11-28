@@ -41,6 +41,7 @@ import VotingPollingResultsbyStatePage from "./pages/VotingPollingResultsbyState
 import VotingPollSurveyPage from "./pages/VotingPollSurveyPage";
 import VotingPollSurveyResultsPage from "./pages/VotingPollSurveyResultsPage";
 import VotingSurveyReportsPage from "./pages/VotingSurveyReportsPage";
+import VotingPollDashBoardPage from "./pages/VotingPollDashBoardPage";
 
 const Router = () => {
   return (
@@ -55,31 +56,54 @@ const Router = () => {
       <Route path="/" element={<ProtectedRoute />}>
         <Route path="" element={<DashboardLayout />}>
           <Route path="dashboard" element={<DashboardPage />} />
-          <Route path="reports/survey" element={<SurveyReportsPage />} />
-          <Route path="tickets" element={<TicketsPage />} />
-          <Route path="user-registration" element={<UserRegistrationPage />} />
-          <Route path="view-user" element={<ViewUserPage />} />
-          <Route path="view-voter" element={<ViewVoterPage />} />
           <Route
-            path="voter-registration"
-            element={<VoterRegistrationPage />}
+            path="voting-poll-dashboard"
+            element={<VotingPollDashBoardPage />}
+          />
+          {/* Opinion Survey with Sub Menu */}
+          <Route
+            path="opinionsurvey/survey"
+            element={<OpinionPollSurveyPage />}
+          />
+          <Route
+            path="opinionsurvey/results"
+            element={<OpinionPollSurveyResultsPage />}
+          />
+          <Route path="opinionsurvey/reports" element={<SurveyReportsPage />} />
+          {/* Voting Poll Survey with Sub Menu */}
+          <Route
+            path="voting-poll-survey/survey"
+            element={<VotingPollSurveyPage />}
+          />
+          <Route
+            path="/voting-poll-survey/results"
+            element={<VotingPollSurveyResultsPage />}
+          />
+          <Route
+            path="/voting-poll-survey/reports"
+            element={<VotingSurveyReportsPage />}
           />
           <Route
             path="voting-polling-reports"
             element={<VotingPollingReportsPage />}
           />
-          <Route path="voting-poll-survey" element={<VotingPollSurveyPage />} />
           <Route
-            path="voting-poll-survey-results"
-            element={<VotingPollSurveyResultsPage />}
-          />
-          <Route
-            path="voting-survey-reports"
-            element={<VotingSurveyReportsPage />}
-          />
-          <Route
-            path="report-by-survey-and-voting-reason"
+            path="/voting-poll-survey/report-by-survey-and-voting-reason"
             element={<ReportbySurveyandVotingReasonPage />}
+          />
+          {/* User Management With Sub Menu */}
+          <Route path="/user-management/user-registration" element={<UserRegistrationPage />} />
+          <Route path="/user-management/view-user" element={<ViewUserPage />} />
+
+
+          {/* Voter Management with Sub Menu */}
+
+
+          <Route path="tickets" element={<TicketsPage />} />
+          <Route path="view-voter" element={<ViewVoterPage />} />
+          <Route
+            path="voter-registration"
+            element={<VoterRegistrationPage />}
           />
           <Route
             path="voting-poll-results"
@@ -88,14 +112,6 @@ const Router = () => {
           <Route
             path="polling-results-by-state"
             element={<VotingPollingResultsbyStatePage />}
-          />
-          <Route
-            path="opinion-poll-survey"
-            element={<OpinionPollSurveyPage />}
-          />
-          <Route
-            path="opinion-poll-survey-results"
-            element={<OpinionPollSurveyResultsPage />}
           />
           <Route path="add-ticket1" element={<AddTicketPage />} />
           <Route path="absent-ticket" element={<AbsentTicketPage />} />

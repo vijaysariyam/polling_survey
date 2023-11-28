@@ -27,9 +27,6 @@ const VotingPollResultsList = ({ showAlert }) => {
 
   const columns = [
     {
-      label: "Distract Name",
-    },
-    {
       label: "Constituency Name",
     },
     {
@@ -72,7 +69,6 @@ const VotingPollResultsList = ({ showAlert }) => {
           columns={columns}
           data={[
             [
-              "Distract Name",
               "Constituency Name",
               "MLA Name",
               "Constituency Votes",
@@ -83,7 +79,6 @@ const VotingPollResultsList = ({ showAlert }) => {
               "Others",
             ],
             [
-              "Distract Name",
               "Constituency Name",
               "MLA Name",
               "Constituency Votes",
@@ -94,7 +89,6 @@ const VotingPollResultsList = ({ showAlert }) => {
               "Others",
             ],
             [
-              "Distract Name",
               "Constituency Name",
               "MLA Name",
               "Constituency Votes",
@@ -105,7 +99,6 @@ const VotingPollResultsList = ({ showAlert }) => {
               "Others",
             ],
             [
-              "Distract Name",
               "Constituency Name",
               "MLA Name",
               "Constituency Votes",

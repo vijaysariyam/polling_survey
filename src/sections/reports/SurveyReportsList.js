@@ -14,16 +14,29 @@ import MUIDataTable from "mui-datatables";
 import { connect } from "react-redux";
 import { showAlert } from "../../actions/alert";
 import { LoadingButton } from "@mui/lab";
+import PollResultsBarChartWidget from "../opinionPollSurveyResults/PollResultsBarChartWidget";
 
 const SurveyReportsList = ({ showAlert }) => {
   useEffect(() => {}, []);
 
   const columns = [
     {
-      label: "District Name",
+      label: "Mandal Name",
     },
     {
-      label: "Constituency Name",
+      label: "Divsion Name",
+    },
+    {
+      label: "Sachivalayam Name",
+    },
+    {
+      label: "Part No",
+    },
+    {
+      label: "Village Name",
+    },
+    {
+      label: "Total Votes",
     },
     {
       label: "YCP (Votes)",
@@ -67,34 +80,36 @@ const SurveyReportsList = ({ showAlert }) => {
   return (
     <Card elevation={1}>
       <Stack>
-        <Box p={3}>
+        <Box
+          p={3}
+          sx={{
+            mb: 2,
+          }}
+        >
           <Typography sx={{ pb: 2 }}>Search by filter</Typography>
 
           <Grid container spacing={2} alignItems="center">
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Select Mandal" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
-              <TextField label="Select Dvision" fullWidth select />
+              <TextField label="Select Division" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Select Sachivalayam" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Select Part No" fullWidth select />
+            </Grid>{" "}
+            <Grid item xs={12} md={6} lg={3}>
+              <TextField label="Select Village" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Select User" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <TextField label="Select Next Level User" fullWidth select />
             </Grid>
-
             <Grid item xs={12} md={6} lg={3}>
               <LoadingButton variant="contained">Search</LoadingButton>
             </Grid>
@@ -102,14 +117,35 @@ const SurveyReportsList = ({ showAlert }) => {
         </Box>
 
         <Divider />
+        <Grid container spacing={2} alignItems="center">
+          <Grid item xs={12} md={6} lg={8}>
+            <PollResultsBarChartWidget
+              title=""
+              sx={{ height: "100%" }}
+              chartLabels={["YCP", "TDP", "JSP", "BJP", "Others"]}
+              chartData={[
+                {
+                  name: "Total",
+                  data: ["150", 120, 100, 80, 50],
+                },
+              ]}
+            />
+          </Grid>
+        </Grid>
 
         <MUIDataTable
           title="Survey Analysis"
           columns={columns}
           data={[
             [
-              "District 1",
-              "Constituency 1",
+              "Mandal 1",
+
+              "Divsion 1",
+              "Sachivalayam 1",
+              "6",
+
+              "Village 1",
+              "25000",
               "2522",
               "69%",
               "888",
@@ -122,42 +158,57 @@ const SurveyReportsList = ({ showAlert }) => {
               "2%",
             ],
             [
-              "District 1",
-              "Constituency 1",
-              "1234",
-              "64%",
+              "Mandal 2",
+              "Divsion 1",
+              "Sachivalayam 1",
+              "1",
+
+              "Village 1",
+              "25000",
+              "2522",
+              "69%",
               "888",
               "24%",
-              "-",
-              "-",
-              "-",
-              "-",
-              "-",
-              "-",
-            ],
-            [
-              "District 2",
-              "Constituency 2",
-              "1422",
-              "49%",
-              "888",
-              "24%",
-              "-",
-              "-",
+              "699",
+              "5%",
               "455",
               "4%",
               "230",
               "2%",
             ],
             [
-              "District 2",
-              "Constituency 2",
+              "Mandal 3",
+              "Divsion 1",
+              "Sachivalayam 1",
+          "2",
+
+              "Village 1",
+              "25000",
               "2522",
-              "59%",
+              "69%",
               "888",
               "24%",
-              "-",
-              "-",
+              "699",
+              "5%",
+              "455",
+              "4%",
+              "230",
+              "2%",
+            ],
+            [
+              "Mandal 4",
+              "Divsion 1",
+              "Sachivalayam 1",
+              "3",
+
+              "Village 1",
+              "25000",
+              "2522",
+              "69%",
+              "888",
+              "24%",
+              "699",
+              "5%",
               "455",
               "4%",
               "230",
